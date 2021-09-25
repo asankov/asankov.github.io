@@ -1,0 +1,4 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Anton Sankov's blog"
+theme = "papermod"
