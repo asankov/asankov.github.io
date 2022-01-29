@@ -2,6 +2,9 @@ baseURL: "https://asankov.dev"
 title: "Anton Sankov's Blog"
 
 enableRobotsTXT: true
+# disable RSS
+disableKinds:
+  - RSS
 
 # Hugo allows theme composition (and inheritance). The precedence is from left to right.
 theme: ["docsy"]
