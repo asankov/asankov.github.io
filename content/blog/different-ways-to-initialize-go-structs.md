@@ -5,6 +5,8 @@ date: 2020-01-29
 description: >
   In this article, we'll take a look at what options Go is giving us to initialize our structs,
   what are their limitations and how to overcome them.
+categories:
+  - Go
 ---
 Many languages like Java, C#, etc. have `constructors` that help you instantiate an object and its properties.
 
