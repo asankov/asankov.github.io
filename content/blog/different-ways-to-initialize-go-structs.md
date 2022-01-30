@@ -1,7 +1,7 @@
 ---
 title: "Different Ways to Initialize Go structs"
 linkTitle: "Different Ways to Initialize Go structs"
-date: 2020-01-29
+date: 2022-01-29
 description: >
   In this article, we'll take a look at what options Go is giving us to initialize our structs,
   what are their limitations and how to overcome them.
