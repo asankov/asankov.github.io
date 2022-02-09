@@ -33,7 +33,7 @@ person := &Person{
 }
 
 // new build-in
-person := new(Person) // p is of type *Person
+person := new(Person) // person is of type *Person
 person.age = 25
 person.name = "Anton"
 ```
@@ -168,7 +168,7 @@ type PersonOptions struct {
 }
 
 func NewPerson(opts *PersonOptions) *Person {
-  if opts.Age < 0 || opts.Salary < 0 {
+  if opts == nil || opts.Age < 0 || opts.Salary < 0 {
     panic("NewPerson: age and salary cannot be negative numbers")
   }
   return &Person{name: opts.Name, age: opts.Age, salary: opts.Salary}
@@ -252,6 +252,9 @@ A middle ground between constructor with required positional arguments and optio
 ```go
 func NewPerson(name string, options *PersonOptions) *Person {
   p := &Person{name: name}
+  if options == nil {
+    return p
+  }
   if options.Age != 0 /* OR options.Age != nil */ {
     p.age = options.Age /* OR p.age = *options.Age */
   }
@@ -260,6 +263,11 @@ func NewPerson(name string, options *PersonOptions) *Person {
   }
   return p
 }
+
+// usage:
+p := NewPerson("Anton", &people.PersonOptions{Age: 25})
+
+fmt.Println(p) // {name: "Anton", age: 25}
 ```
 
 ## Summary
@@ -277,10 +285,10 @@ They depend on your use case and the way your code is meant to be used.
 As with everything in computer science, there is not a single correct solution or a silver bullet.
 It’s all a matter of the tradeoffs you are willing to make.
 
-If you are writing a library that will be used by hundreds of other projects, backwards-compatible changes will not be appreciated by your consumers, so you need to choose the more flexible options.
+If you are writing a library that will be used by hundreds of other projects, backwards-incompatible changes will not be appreciated by your consumers, so you need to choose the more flexible options.
 If you’re working locally in a single codebase, signature changes can be beneficial, because they will enforce that all usages of the methods are adapted.
 
 If you got to the end of the article, I just want you to know that I recently started this blog,
 and this is the first article in it.
-If it was useful for you, you learned something new, or you think it can be improved feel free to ping me on [Twitter](https:/twitter.com/a_sankov), [LinkedIn](https://linkedin.com/in/asankov) or [email](mailto:asankov96+initgo@gmail.com).
+If it was useful for you, you learned something new, or you think it can be improved feel free to ping me on [Twitter](https://twitter.com/a_sankov), [LinkedIn](https://linkedin.com/in/asankov) or [email](mailto:asankov96+initgo@gmail.com).
 I would appreciate the feedback.
