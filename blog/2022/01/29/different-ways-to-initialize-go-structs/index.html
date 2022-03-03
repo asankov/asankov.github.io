@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
-<meta name=generator content="Hugo 0.92.2">
+<meta name=generator content="Hugo 0.93.1">
 <link rel=canonical href=https://asankov.dev/blog/2022/01/29/different-ways-to-initialize-go-structs/>
 <meta name=robots content="index, follow">
 <link rel="shortcut icon" href=/favicons/favicon.ico>
@@ -15,8 +15,7 @@
 <link rel=icon type=image/png href=/favicons/android-96x96.png sizes=96x96>
 <link rel=icon type=image/png href=/favicons/android-144x144.png sizes=144x144>
 <link rel=icon type=image/png href=/favicons/android-192x192.png sizes=192x192>
-<title>Different Ways to Initialize Go structs | Anton Sankov's Blog</title>
-<meta name=description content="In this article, we'll take a look at what options Go is giving us to initialize our structs, what are their limitations and how to overcome them.
+<title>Different Ways to Initialize Go structs | Anton Sankov's Blog</title><meta name=description content="In this article, we'll take a look at what options Go is giving us to initialize our structs, what are their limitations and how to overcome them.
 ">
 <meta property="og:title" content="Different Ways to Initialize Go structs">
 <meta property="og:description" content="In this article, we'll take a look at what options Go is giving us to initialize our structs, what are their limitations and how to overcome them.
@@ -38,11 +37,10 @@
 <link href=/scss/main.min.44a19d8ca81d4539a8082ac72051abbde416454636e4b104766b793a69508550.css rel=stylesheet integrity>
 <script src=https://code.jquery.com/jquery-3.5.1.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Y9WXX1393"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-7Y9WXX1393',{anonymize_ip:!1})}</script>
-</head>
-<body class="td-page td-blog">
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-7Y9WXX1393",{anonymize_ip:!1})}</script>
+</head><body class="td-page td-blog">
 <header>
-<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar" style=position:relative>
 <a class=navbar-brand href=/>
 <span class=navbar-logo></span><span class="text-uppercase font-weight-bold text-nord5">Anton Sankov's Blog</span>
 </a>
@@ -50,16 +48,9 @@
 <ul class="navbar-nav mt-2 mt-lg-0">
 <li class="nav-item mr-4 mb-2 mb-lg-0">
 <a class="nav-link active" href=/blog/><span class=active>Blog</span></a>
-</li>
-<li class="nav-item mr-4 mb-2 mb-lg-0">
+</li><li class="nav-item mr-4 mb-2 mb-lg-0">
 <a class=nav-link href=/about/><span>About Me</span></a>
-</li>
-</ul>
-</div>
-<div class="navbar-nav d-none d-lg-block"></div>
-</nav>
-</header>
-<div class="container-fluid td-outer">
+</li></ul></div><div class="navbar-nav d-none d-lg-block"></div></nav></header><div class="container-fluid td-outer">
 <div class=td-main>
 <div class="row flex-xl-nowrap">
 <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
@@ -67,292 +58,210 @@
 <form class="td-sidebar__search d-flex align-items-center">
 <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type=button data-toggle=collapse data-target=#td-section-nav aria-controls=td-docs-nav aria-expanded=false aria-label="Toggle section navigation">
 </button>
-</form>
-<nav class="collapse td-sidebar-nav" id=td-section-nav>
+</form><nav class="collapse td-sidebar-nav" id=td-section-nav>
 <ul class="td-sidebar-nav__section pr-md-3 ul-0">
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id=m-blog-li>
 <a href=/blog/ title="Anton Sankov's Blog" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id=m-blog><span>Blog</span></a>
 <ul class=ul-1>
 <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id=m-blog20220129different-ways-to-initialize-go-structs-li>
 <a href=/blog/2022/01/29/different-ways-to-initialize-go-structs/ class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id=m-blog20220129different-ways-to-initialize-go-structs><span class=td-sidebar-nav-active-item>Different Ways to Initialize Go structs</span></a>
-</li>
-</ul>
-</li>
-</ul>
-</nav>
-</div>
-</aside>
-<aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+</li></ul></li></ul></nav></div></aside><aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
 <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
-</div>
-<div class=td-toc><nav id=TableOfContents>
+</div><div class=td-toc><nav id=TableOfContents>
 <ul>
-<li><a href=#build-in-options>Build-in options</a></li>
-<li><a href=#constructor-function>Constructor function</a>
+<li><a href=#build-in-options>Build-in options</a></li><li><a href=#constructor-function>Constructor function</a>
 <ul>
-<li><a href=#with-positional-arguments>With positional arguments</a></li>
-<li><a href=#with-options-struct>With Options struct</a></li>
-<li><a href=#variadic-function-constructor>Variadic function constructor</a></li>
-<li><a href=#middle-ground>Middle ground</a></li>
-</ul>
-</li>
-<li><a href=#summary>Summary</a></li>
-<li><a href=#takeaways>Takeaways</a></li>
-</ul>
-</nav></div>
-<div class="taxonomy taxonomy-terms-cloud taxo-categories">
-<h5 class=taxonomy-title>Categories</h5>
-<ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=https://asankov.dev/categories/go/ data-taxonomy-term=go><span class=taxonomy-label>Go</span><span class=taxonomy-count>1</span></a></li>
-</ul>
-</div>
-</aside>
-<main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
+<li><a href=#with-positional-arguments>With positional arguments</a></li><li><a href=#with-options-struct>With Options struct</a></li><li><a href=#variadic-function-constructor>Variadic function constructor</a></li><li><a href=#middle-ground>Middle ground</a></li></ul></li><li><a href=#summary>Summary</a></li><li><a href=#takeaways>Takeaways</a></li></ul></nav></div><div class="taxonomy taxonomy-terms-cloud taxo-categories">
+<h5 class=taxonomy-title>Categories</h5><ul class=taxonomy-terms>
+<li><a class=taxonomy-term href=https://asankov.dev/categories/go/ data-taxonomy-term=go><span class=taxonomy-label>Go</span><span class=taxonomy-count>1</span></a></li></ul></div></aside><main class="col-12 col-md-9 col-xl-8 pl-md-5 pr-md-4" role=main>
 <div class=td-content>
-<h1>Different Ways to Initialize Go structs</h1>
-<div class=lead>In this article, we&rsquo;ll take a look at what options Go is giving us to initialize our structs, what are their limitations and how to overcome them.</div>
-<div class="td-byline mb-4">
+<h1>Different Ways to Initialize Go structs</h1><div class=lead>In this article, we&rsquo;ll take a look at what options Go is giving us to initialize our structs, what are their limitations and how to overcome them.</div><div class="td-byline mb-4">
 <time datetime=2022-01-29 class=text-muted>Saturday, January 29, 2022</time>
-</div>
-<header class=article-meta>
+</div><header class=article-meta>
 <div class="taxonomy taxonomy-terms-article taxo-categories">
-<h5 class=taxonomy-title>Categories:</h5>
-<ul class=taxonomy-terms>
-<li><a class=taxonomy-term href=https://asankov.dev/categories/go/ data-taxonomy-term=go><span class=taxonomy-label>Go</span></a></li>
-</ul>
-</div>
-<p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; 8 minute read &nbsp;</p>
-</header>
-<p>Many languages like Java, C#, etc. have <code>constructors</code> that help you instantiate an object and its properties.</p>
-<p>Go does not have ‘constructors’ in the pure sense of the word.
-Let&rsquo;s see what Go has instead.</p>
-<h2 id=build-in-options>Build-in options</h2>
-<p>Out-of-the-box Go gives us 2 ways to initialize structs - struct literals and the <code>new</code> build-in function.
-Let’s see what these look like for a simple struct named <code>Person</code>:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#719e07>package</span> people
-
-<span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
-  age  <span style=color:#dc322f>int</span>
-  name <span style=color:#dc322f>string</span>
-}
-
-<span style=color:#586e75>// struct literal
-</span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>Person{
-  age:  <span style=color:#2aa198>25</span>,
-  name: <span style=color:#2aa198>&#34;Anton&#34;</span>,
-}
-
-<span style=color:#586e75>// new build-in
-</span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#b58900>new</span>(Person) <span style=color:#586e75>// person is of type *Person
-</span><span style=color:#586e75></span>person.age = <span style=color:#2aa198>25</span>
-person.name = <span style=color:#2aa198>&#34;Anton&#34;</span>
-</code></pre></div><p>However, in this scenario the <code>Person</code> fields are un-exported, thus they cannot be used outside of the <code>people</code> package. We can easily mitigate this by exporting them:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// people/person.go
-</span><span style=color:#586e75></span><span style=color:#719e07>package</span> people
-
-<span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
-  Name <span style=color:#dc322f>string</span>
-  Age  <span style=color:#dc322f>int</span>
-}
-
-<span style=color:#586e75>// main.go
-</span><span style=color:#586e75></span><span style=color:#719e07>package</span> main
-
-<span style=color:#719e07>import</span> <span style=color:#2aa198>&#34;asankov.dev/people&#34;</span>
-
-<span style=color:#586e75>// struct literal
-</span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>people.Person{
-  Name: <span style=color:#2aa198>&#34;Anton&#34;</span>,
-  Age:  <span style=color:#2aa198>25</span>,
-}
-
-<span style=color:#586e75>// new build-in
-</span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#b58900>new</span>(people.Person) <span style=color:#586e75>// p is of type *people.Person
-</span><span style=color:#586e75></span>person.Name = <span style=color:#2aa198>&#34;Anton&#34;</span>
-person.Age = <span style=color:#2aa198>25</span>
-</code></pre></div><p>But both of these options contain a big trade-off - now all the fields of the person can be viewed and changed by anyone.
+<h5 class=taxonomy-title>Categories:</h5><ul class=taxonomy-terms>
+<li><a class=taxonomy-term href=https://asankov.dev/categories/go/ data-taxonomy-term=go><span class=taxonomy-label>Go</span></a></li></ul></div><p class=reading-time><i class="fa fa-clock" aria-hidden=true></i>&nbsp; 8 minute read &nbsp;</p></header><p>Many languages like Java, C#, etc. have <code>constructors</code> that help you instantiate an object and its properties.</p><p>Go does not have ‘constructors’ in the pure sense of the word.
+Let&rsquo;s see what Go has instead.</p><h2 id=build-in-options>Build-in options</h2><p>Out-of-the-box Go gives us 2 ways to initialize structs - struct literals and the <code>new</code> build-in function.
+Let’s see what these look like for a simple struct named <code>Person</code>:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#719e07>package</span> people
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
+</span></span><span style=display:flex><span>  age  <span style=color:#dc322f>int</span>
+</span></span><span style=display:flex><span>  name <span style=color:#dc322f>string</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// struct literal
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>Person{
+</span></span><span style=display:flex><span>  age:  <span style=color:#2aa198>25</span>,
+</span></span><span style=display:flex><span>  name: <span style=color:#2aa198>&#34;Anton&#34;</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// new build-in
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#b58900>new</span>(Person) <span style=color:#586e75>// person is of type *Person
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>person.age = <span style=color:#2aa198>25</span>
+</span></span><span style=display:flex><span>person.name = <span style=color:#2aa198>&#34;Anton&#34;</span>
+</span></span></code></pre></div><p>However, in this scenario the <code>Person</code> fields are un-exported, thus they cannot be used outside of the <code>people</code> package. We can easily mitigate this by exporting them:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#586e75>// people/person.go
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span><span style=color:#719e07>package</span> people
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
+</span></span><span style=display:flex><span>  Name <span style=color:#dc322f>string</span>
+</span></span><span style=display:flex><span>  Age  <span style=color:#dc322f>int</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// main.go
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span><span style=color:#719e07>package</span> main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#719e07>import</span> <span style=color:#2aa198>&#34;asankov.dev/people&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// struct literal
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>people.Person{
+</span></span><span style=display:flex><span>  Name: <span style=color:#2aa198>&#34;Anton&#34;</span>,
+</span></span><span style=display:flex><span>  Age:  <span style=color:#2aa198>25</span>,
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// new build-in
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>person <span style=color:#719e07>:=</span> <span style=color:#b58900>new</span>(people.Person) <span style=color:#586e75>// p is of type *people.Person
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>person.Name = <span style=color:#2aa198>&#34;Anton&#34;</span>
+</span></span><span style=display:flex><span>person.Age = <span style=color:#2aa198>25</span>
+</span></span></code></pre></div><p>But both of these options contain a big trade-off - now all the fields of the person can be viewed and changed by anyone.
 Also, we have no validation.
-For example, in this scenario, we can easily set the <code>Age</code> property to a negative value.</p>
-<p>So what can we do if we don’t want to export the fields or enforce additional validation?</p>
-<h2 id=constructor-function>Constructor function</h2>
-<p>As I said in the beginning, Go does not have constructors.
+For example, in this scenario, we can easily set the <code>Age</code> property to a negative value.</p><p>So what can we do if we don’t want to export the fields or enforce additional validation?</p><h2 id=constructor-function>Constructor function</h2><p>As I said in the beginning, Go does not have constructors.
 However, that does not mean we cannot define one ourselves.
-Let’s see how a user-defined constructor can look like:</p>
-<h3 id=with-positional-arguments>With positional arguments</h3>
-<p>We can define a constructor function where the struct fields are positional arguments of the function:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#719e07>package</span> people
-
-<span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(name <span style=color:#dc322f>string</span>, age <span style=color:#dc322f>int</span>) <span style=color:#719e07>*</span>Person {
-  <span style=color:#719e07>if</span> age &lt; <span style=color:#2aa198>0</span> {
-    <span style=color:#b58900>panic</span>(<span style=color:#2aa198>&#34;NewPerson: age cannot be a negative number&#34;</span>)
-  }
-  <span style=color:#719e07>return</span> <span style=color:#719e07>&amp;</span>Person{name: name, age: age}
-}
-</code></pre></div><p>This provides us 2 benefits:</p>
-<ol>
-<li>We have validation for the <code>age</code> field. If someone tried to create a <code>Person</code> with a negative age, they will get a panic with a descriptive error of what they did wrong (we could have also returned an error, but this does not matter for the topic at hand). In the same manner, we could add validation for the <code>name</code> field (for example, that it’s not empty).</li>
-<li>The <code>Person</code> internals are decoupled from the initialization logic. For example, we can add an <code>isUnderage</code> field to the struct and compute that based on <code>age</code> inside of the <code>NewPerson</code> function. The consumer of the function won’t have to be bothered with the logic behind this field, because we are taking care of it.</li>
-</ol>
-<p>But it also has some downsides. If our <code>Person</code> had many <code>string</code> fields (for example - multiple names or addresses) this function would have looked like that:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(firstName, lastName, addressLine1, addressLine2 <span style=color:#dc322f>string</span>, age <span style=color:#dc322f>int</span>) <span style=color:#719e07>*</span>Person
-</code></pre></div><p>and having a function with multiple parameters of the same type is a recipe for disaster.
-In this case, the danger is that the consumer of this function can easily misplace any of the parameters (for example, replace the first and last names) and they would have no compile-time check for that.</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#586e75>// is it?
-</span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#2aa198>&#34;Sankov&#34;</span>, <span style=color:#2aa198>&#34;Bulgaria&#34;</span>, <span style=color:#2aa198>&#34;Sofia&#34;</span>, <span style=color:#2aa198>25</span>)
-<span style=color:#586e75>// or?
-</span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#2aa198>&#34;Sankov&#34;</span>, <span style=color:#2aa198>&#34;Sofia&#34;</span>, <span style=color:#2aa198>&#34;Bulgaria&#34;</span>, <span style=color:#2aa198>25</span>)
-<span style=color:#586e75>// or?
-</span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#2aa198>&#34;Bulgaria&#34;</span>, <span style=color:#2aa198>&#34;Sofia&#34;</span>, <span style=color:#2aa198>&#34;Sofia str, number 25&#34;</span>, <span style=color:#2aa198>25</span>)
-</code></pre></div><p>Another, even bigger issue than that is backward compatibility.
+Let’s see how a user-defined constructor can look like:</p><h3 id=with-positional-arguments>With positional arguments</h3><p>We can define a constructor function where the struct fields are positional arguments of the function:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#719e07>package</span> people
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(name <span style=color:#dc322f>string</span>, age <span style=color:#dc322f>int</span>) <span style=color:#719e07>*</span>Person {
+</span></span><span style=display:flex><span>  <span style=color:#719e07>if</span> age &lt; <span style=color:#2aa198>0</span> {
+</span></span><span style=display:flex><span>    <span style=color:#b58900>panic</span>(<span style=color:#2aa198>&#34;NewPerson: age cannot be a negative number&#34;</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> <span style=color:#719e07>&amp;</span>Person{name: name, age: age}
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This provides us 2 benefits:</p><ol>
+<li>We have validation for the <code>age</code> field. If someone tried to create a <code>Person</code> with a negative age, they will get a panic with a descriptive error of what they did wrong (we could have also returned an error, but this does not matter for the topic at hand). In the same manner, we could add validation for the <code>name</code> field (for example, that it’s not empty).</li><li>The <code>Person</code> internals are decoupled from the initialization logic. For example, we can add an <code>isUnderage</code> field to the struct and compute that based on <code>age</code> inside of the <code>NewPerson</code> function. The consumer of the function won’t have to be bothered with the logic behind this field, because we are taking care of it.</li></ol><p>But it also has some downsides. If our <code>Person</code> had many <code>string</code> fields (for example - multiple names or addresses) this function would have looked like that:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(firstName, lastName, addressLine1, addressLine2 <span style=color:#dc322f>string</span>, age <span style=color:#dc322f>int</span>) <span style=color:#719e07>*</span>Person
+</span></span></code></pre></div><p>and having a function with multiple parameters of the same type is a recipe for disaster.
+In this case, the danger is that the consumer of this function can easily misplace any of the parameters (for example, replace the first and last names) and they would have no compile-time check for that.</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#586e75>// is it?
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#2aa198>&#34;Sankov&#34;</span>, <span style=color:#2aa198>&#34;Bulgaria&#34;</span>, <span style=color:#2aa198>&#34;Sofia&#34;</span>, <span style=color:#2aa198>25</span>)
+</span></span><span style=display:flex><span><span style=color:#586e75>// or?
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#2aa198>&#34;Sankov&#34;</span>, <span style=color:#2aa198>&#34;Sofia&#34;</span>, <span style=color:#2aa198>&#34;Bulgaria&#34;</span>, <span style=color:#2aa198>25</span>)
+</span></span><span style=display:flex><span><span style=color:#586e75>// or?
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#2aa198>&#34;Bulgaria&#34;</span>, <span style=color:#2aa198>&#34;Sofia&#34;</span>, <span style=color:#2aa198>&#34;Sofia str, number 25&#34;</span>, <span style=color:#2aa198>25</span>)
+</span></span></code></pre></div><p>Another, even bigger issue than that is backward compatibility.
 Let’s say that we need to add additional fields to our <code>Person</code> struct. For example, <code>salary</code> (money rules the world, don’t they).
-We can easily add it:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#719e07>package</span> people
-
-<span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
-  age    <span style=color:#dc322f>int</span>
-  name   <span style=color:#dc322f>string</span>
-  salary <span style=color:#dc322f>float64</span>
-}
-
-<span style=color:#586e75>// change
-</span><span style=color:#586e75>// func NewPerson(name string, age int) *Person {
-</span><span style=color:#586e75>// to:
-</span><span style=color:#586e75></span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(name <span style=color:#dc322f>string</span>, age <span style=color:#dc322f>int</span>, salary <span style=color:#dc322f>float64</span>) <span style=color:#719e07>*</span>Person {
-  <span style=color:#719e07>if</span> age &lt; <span style=color:#2aa198>0</span> <span style=color:#719e07>||</span> salary &lt; <span style=color:#2aa198>0</span> {
-    <span style=color:#b58900>panic</span>(<span style=color:#2aa198>&#34;NewPerson: age and salary cannot be negative numbers&#34;</span>)
-  }
-  <span style=color:#719e07>return</span> <span style=color:#719e07>&amp;</span>Person{name: name, age: age, salary: salary}
-}
-</code></pre></div><p>However, this is a breaking change to the <code>NewPerson</code> method. If this were a library, all of the consumers would get compilation errors when they upgrade to the new version. This is definitely not ideal and could have a side-effect of your consumers screaming at you on Twitter.</p>
-<p>Is there a way to make this without breaking change?
+We can easily add it:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#719e07>package</span> people
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
+</span></span><span style=display:flex><span>  age    <span style=color:#dc322f>int</span>
+</span></span><span style=display:flex><span>  name   <span style=color:#dc322f>string</span>
+</span></span><span style=display:flex><span>  salary <span style=color:#dc322f>float64</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// change
+</span></span></span><span style=display:flex><span><span style=color:#586e75>// func NewPerson(name string, age int) *Person {
+</span></span></span><span style=display:flex><span><span style=color:#586e75>// to:
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(name <span style=color:#dc322f>string</span>, age <span style=color:#dc322f>int</span>, salary <span style=color:#dc322f>float64</span>) <span style=color:#719e07>*</span>Person {
+</span></span><span style=display:flex><span>  <span style=color:#719e07>if</span> age &lt; <span style=color:#2aa198>0</span> <span style=color:#719e07>||</span> salary &lt; <span style=color:#2aa198>0</span> {
+</span></span><span style=display:flex><span>    <span style=color:#b58900>panic</span>(<span style=color:#2aa198>&#34;NewPerson: age and salary cannot be negative numbers&#34;</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> <span style=color:#719e07>&amp;</span>Person{name: name, age: age, salary: salary}
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>However, this is a breaking change to the <code>NewPerson</code> method. If this were a library, all of the consumers would get compilation errors when they upgrade to the new version. This is definitely not ideal and could have a side-effect of your consumers screaming at you on Twitter.</p><p>Is there a way to make this without breaking change?
 Yes, of course.
 To do this we need to restructure our <code>NewPerson</code> function.
-Let’s see what are our options.</p>
-<h3 id=with-options-struct>With Options struct</h3>
-<p>We can define <code>PersonOptions</code> struct that mirrors the <code>Person</code> but with exported field and pass this to <code>NewPerson</code>.
-Let’s see how this looks like:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#719e07>package</span> people
-
-<span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
-  age    <span style=color:#dc322f>int</span>
-  name   <span style=color:#dc322f>string</span>
-  salary <span style=color:#dc322f>float64</span>
-}
-
-<span style=color:#268bd2>type</span> PersonOptions <span style=color:#268bd2>struct</span> {
-  Age    <span style=color:#dc322f>int</span>
-  Name   <span style=color:#dc322f>string</span>
-  Salary <span style=color:#dc322f>float64</span>
-}
-
-<span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(opts <span style=color:#719e07>*</span>PersonOptions) <span style=color:#719e07>*</span>Person {
-  <span style=color:#719e07>if</span> opts <span style=color:#719e07>==</span> <span style=color:#cb4b16>nil</span> <span style=color:#719e07>||</span> opts.Age &lt; <span style=color:#2aa198>0</span> <span style=color:#719e07>||</span> opts.Salary &lt; <span style=color:#2aa198>0</span> {
-    <span style=color:#b58900>panic</span>(<span style=color:#2aa198>&#34;NewPerson: age and salary cannot be negative numbers&#34;</span>)
-  }
-  <span style=color:#719e07>return</span> <span style=color:#719e07>&amp;</span>Person{name: opts.Name, age: opts.Age, salary: opts.Salary}
-}
-</code></pre></div><p>This allows us to introduce new fields to <code>Person</code> as much as we like without breaking the contract of <code>NewPerson</code>.</p>
-<p>However, there is another trade-off here: If we add a new field to <code>Person</code>(and respectively <code>PersonOptions</code>) we cannot easily enforce that all consumers of <code>NewPerson</code> will set the new properties.</p>
-<p>Of course, we can fail <code>NewPerson</code> if any of the new fields are missing, but this is actually a breaking change, not much better than the one in the first example (and even worse, because it will only be caught at runtime).</p>
-<p>Another downside here is that it&rsquo;s not obvious which fields from the <code>PersonOptions</code> structs are required and which are optional.
-The clearest way to communicate this to the consumers is via docstrings, which is not as obvious as just looking at the method signature (because who reads the docs, right).</p>
-<p>Possible mitigation to this problem is if we define the required field in <code>PersonOptions</code> as value types and the optional ones as refs.
-For example:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#268bd2>type</span> PersonOptions <span style=color:#268bd2>struct</span> {
-  <span style=color:#586e75>// Age and Name are required
-</span><span style=color:#586e75></span>  Age    <span style=color:#dc322f>int</span>
-  Name   <span style=color:#dc322f>string</span>
-
-  <span style=color:#586e75>// Salary is optional
-</span><span style=color:#586e75></span>  Salary <span style=color:#719e07>*</span><span style=color:#dc322f>float64</span>
-}
-</code></pre></div><p>This way the consumer can set the optional fields to <code>nil</code> and not bother with default values.
-It is also a bit more clear what is required and what is not.</p>
-<h3 id=variadic-function-constructor>Variadic function constructor</h3>
-<p>Alternative to that is to make our constructor a variadic function that accepts an arbitrary number of mutating functions.
+Let’s see what are our options.</p><h3 id=with-options-struct>With Options struct</h3><p>We can define <code>PersonOptions</code> struct that mirrors the <code>Person</code> but with exported field and pass this to <code>NewPerson</code>.
+Let’s see how this looks like:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#719e07>package</span> people
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>type</span> Person <span style=color:#268bd2>struct</span> {
+</span></span><span style=display:flex><span>  age    <span style=color:#dc322f>int</span>
+</span></span><span style=display:flex><span>  name   <span style=color:#dc322f>string</span>
+</span></span><span style=display:flex><span>  salary <span style=color:#dc322f>float64</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>type</span> PersonOptions <span style=color:#268bd2>struct</span> {
+</span></span><span style=display:flex><span>  Age    <span style=color:#dc322f>int</span>
+</span></span><span style=display:flex><span>  Name   <span style=color:#dc322f>string</span>
+</span></span><span style=display:flex><span>  Salary <span style=color:#dc322f>float64</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(opts <span style=color:#719e07>*</span>PersonOptions) <span style=color:#719e07>*</span>Person {
+</span></span><span style=display:flex><span>  <span style=color:#719e07>if</span> opts <span style=color:#719e07>==</span> <span style=color:#cb4b16>nil</span> <span style=color:#719e07>||</span> opts.Age &lt; <span style=color:#2aa198>0</span> <span style=color:#719e07>||</span> opts.Salary &lt; <span style=color:#2aa198>0</span> {
+</span></span><span style=display:flex><span>    <span style=color:#b58900>panic</span>(<span style=color:#2aa198>&#34;NewPerson: age and salary cannot be negative numbers&#34;</span>)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> <span style=color:#719e07>&amp;</span>Person{name: opts.Name, age: opts.Age, salary: opts.Salary}
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This allows us to introduce new fields to <code>Person</code> as much as we like without breaking the contract of <code>NewPerson</code>.</p><p>However, there is another trade-off here: If we add a new field to <code>Person</code>(and respectively <code>PersonOptions</code>) we cannot easily enforce that all consumers of <code>NewPerson</code> will set the new properties.</p><p>Of course, we can fail <code>NewPerson</code> if any of the new fields are missing, but this is actually a breaking change, not much better than the one in the first example (and even worse, because it will only be caught at runtime).</p><p>Another downside here is that it&rsquo;s not obvious which fields from the <code>PersonOptions</code> structs are required and which are optional.
+The clearest way to communicate this to the consumers is via docstrings, which is not as obvious as just looking at the method signature (because who reads the docs, right).</p><p>Possible mitigation to this problem is if we define the required field in <code>PersonOptions</code> as value types and the optional ones as refs.
+For example:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#268bd2>type</span> PersonOptions <span style=color:#268bd2>struct</span> {
+</span></span><span style=display:flex><span>  <span style=color:#586e75>// Age and Name are required
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>  Age    <span style=color:#dc322f>int</span>
+</span></span><span style=display:flex><span>  Name   <span style=color:#dc322f>string</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#586e75>// Salary is optional
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>  Salary <span style=color:#719e07>*</span><span style=color:#dc322f>float64</span>
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>This way the consumer can set the optional fields to <code>nil</code> and not bother with default values.
+It is also a bit more clear what is required and what is not.</p><h3 id=variadic-function-constructor>Variadic function constructor</h3><p>Alternative to that is to make our constructor a variadic function that accepts an arbitrary number of mutating functions.
 Then, the implementation of the method will run all the functions one by one on an instance of the struct which will be returned by the constructor.
-This means, we also need to provide a set of functions that will mutate the fields.</p>
-<p>If you did not understand anything from this explanation, don’t worry.
-Here’s how the code looks like:</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#719e07>package</span> people
-
-<span style=color:#268bd2>type</span> PersonOptionFunc <span style=color:#268bd2>func</span>(<span style=color:#719e07>*</span>Person)
-
-<span style=color:#268bd2>func</span> <span style=color:#268bd2>WithName</span>(name <span style=color:#dc322f>string</span>) PersonOptionFunc {
-  <span style=color:#719e07>return</span> <span style=color:#268bd2>func</span>(p <span style=color:#719e07>*</span>Person) {
-    p.name = name
-  }
-}
-
-<span style=color:#268bd2>func</span> <span style=color:#268bd2>WithAge</span>(age <span style=color:#dc322f>int</span>) PersonOptionFunc {
-  <span style=color:#719e07>return</span> <span style=color:#268bd2>func</span>(p <span style=color:#719e07>*</span>Person) {
-    p.age = age
-  }
-}
-
-<span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(opts <span style=color:#719e07>...</span>PersonOptionFunc) <span style=color:#719e07>*</span>Person {
-  p <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>Person{}
-  <span style=color:#719e07>for</span> _, opt <span style=color:#719e07>:=</span> <span style=color:#719e07>range</span> opts {
-    <span style=color:#268bd2>opt</span>(p)
-  }
-  <span style=color:#719e07>return</span> p
-}
-
-<span style=color:#586e75>// usage:
-</span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> people.<span style=color:#268bd2>NewPerson</span>(people.<span style=color:#268bd2>WithName</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>), people.<span style=color:#268bd2>WithAge</span>(<span style=color:#2aa198>25</span>))
-
-fmt.<span style=color:#268bd2>Println</span>(p) <span style=color:#586e75>// {name: &#34;Anton&#34;, age: 25}
-</span></code></pre></div><p>The downside here is that the amount of <code>WithXXX</code> functions are not obvious, and the consumers of the package would either have to search them in the package documentation or depend on their IDE autocomplete to show them the possible options.</p>
-<p>In my opinion, it does not give you any benefits over the <code>Options</code> struct, but bring the downside that the options are not obvious.</p>
-<h3 id=middle-ground>Middle ground</h3>
-<p>A middle ground between constructor with required positional arguments and optional arguments would be to have the required fields for a given struct as positional arguments so that the consumer MUST pass them, and have everything else as optional parameters, which may be skipped.</p>
-<div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(name <span style=color:#dc322f>string</span>, options <span style=color:#719e07>*</span>PersonOptions) <span style=color:#719e07>*</span>Person {
-  p <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>Person{name: name}
-  <span style=color:#719e07>if</span> options <span style=color:#719e07>==</span> <span style=color:#cb4b16>nil</span> {
-    <span style=color:#719e07>return</span> p
-  }
-  <span style=color:#719e07>if</span> options.Age <span style=color:#719e07>!=</span> <span style=color:#2aa198>0</span> <span style=color:#586e75>/* OR options.Age != nil */</span> {
-    p.age = options.Age <span style=color:#586e75>/* OR p.age = *options.Age */</span>
-  }
-  <span style=color:#719e07>if</span> options.Salary <span style=color:#719e07>!=</span> <span style=color:#2aa198>0</span> <span style=color:#586e75>/* OR options.Salary != nil */</span>  {
-    p.salary = options.Salary <span style=color:#586e75>/* OR p.salary = *options.Salary */</span>
-  }
-  <span style=color:#719e07>return</span> p
-}
-
-<span style=color:#586e75>// usage:
-</span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#719e07>&amp;</span>people.PersonOptions{Age: <span style=color:#2aa198>25</span>})
-
-fmt.<span style=color:#268bd2>Println</span>(p) <span style=color:#586e75>// {name: &#34;Anton&#34;, age: 25}
-</span></code></pre></div><h2 id=summary>Summary</h2>
-<p>There are 2 build-in ways to initialize a Go struct.
+This means, we also need to provide a set of functions that will mutate the fields.</p><p>If you did not understand anything from this explanation, don’t worry.
+Here’s how the code looks like:</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#719e07>package</span> people
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>type</span> PersonOptionFunc <span style=color:#268bd2>func</span>(<span style=color:#719e07>*</span>Person)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>WithName</span>(name <span style=color:#dc322f>string</span>) PersonOptionFunc {
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> <span style=color:#268bd2>func</span>(p <span style=color:#719e07>*</span>Person) {
+</span></span><span style=display:flex><span>    p.name = name
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>WithAge</span>(age <span style=color:#dc322f>int</span>) PersonOptionFunc {
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> <span style=color:#268bd2>func</span>(p <span style=color:#719e07>*</span>Person) {
+</span></span><span style=display:flex><span>    p.age = age
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(opts <span style=color:#719e07>...</span>PersonOptionFunc) <span style=color:#719e07>*</span>Person {
+</span></span><span style=display:flex><span>  p <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>Person{}
+</span></span><span style=display:flex><span>  <span style=color:#719e07>for</span> _, opt <span style=color:#719e07>:=</span> <span style=color:#719e07>range</span> opts {
+</span></span><span style=display:flex><span>    <span style=color:#268bd2>opt</span>(p)
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> p
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// usage:
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> people.<span style=color:#268bd2>NewPerson</span>(people.<span style=color:#268bd2>WithName</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>), people.<span style=color:#268bd2>WithAge</span>(<span style=color:#2aa198>25</span>))
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>fmt.<span style=color:#268bd2>Println</span>(p) <span style=color:#586e75>// {name: &#34;Anton&#34;, age: 25}
+</span></span></span></code></pre></div><p>The downside here is that the amount of <code>WithXXX</code> functions are not obvious, and the consumers of the package would either have to search them in the package documentation or depend on their IDE autocomplete to show them the possible options.</p><p>In my opinion, it does not give you any benefits over the <code>Options</code> struct, but bring the downside that the options are not obvious.</p><h3 id=middle-ground>Middle ground</h3><p>A middle ground between constructor with required positional arguments and optional arguments would be to have the required fields for a given struct as positional arguments so that the consumer MUST pass them, and have everything else as optional parameters, which may be skipped.</p><div class=highlight><pre tabindex=0 style=color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=display:flex><span><span style=color:#268bd2>func</span> <span style=color:#268bd2>NewPerson</span>(name <span style=color:#dc322f>string</span>, options <span style=color:#719e07>*</span>PersonOptions) <span style=color:#719e07>*</span>Person {
+</span></span><span style=display:flex><span>  p <span style=color:#719e07>:=</span> <span style=color:#719e07>&amp;</span>Person{name: name}
+</span></span><span style=display:flex><span>  <span style=color:#719e07>if</span> options <span style=color:#719e07>==</span> <span style=color:#cb4b16>nil</span> {
+</span></span><span style=display:flex><span>    <span style=color:#719e07>return</span> p
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>if</span> options.Age <span style=color:#719e07>!=</span> <span style=color:#2aa198>0</span> <span style=color:#586e75>/* OR options.Age != nil */</span> {
+</span></span><span style=display:flex><span>    p.age = options.Age <span style=color:#586e75>/* OR p.age = *options.Age */</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>if</span> options.Salary <span style=color:#719e07>!=</span> <span style=color:#2aa198>0</span> <span style=color:#586e75>/* OR options.Salary != nil */</span>  {
+</span></span><span style=display:flex><span>    p.salary = options.Salary <span style=color:#586e75>/* OR p.salary = *options.Salary */</span>
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  <span style=color:#719e07>return</span> p
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#586e75>// usage:
+</span></span></span><span style=display:flex><span><span style=color:#586e75></span>p <span style=color:#719e07>:=</span> <span style=color:#268bd2>NewPerson</span>(<span style=color:#2aa198>&#34;Anton&#34;</span>, <span style=color:#719e07>&amp;</span>people.PersonOptions{Age: <span style=color:#2aa198>25</span>})
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>fmt.<span style=color:#268bd2>Println</span>(p) <span style=color:#586e75>// {name: &#34;Anton&#34;, age: 25}
+</span></span></span></code></pre></div><h2 id=summary>Summary</h2><p>There are 2 build-in ways to initialize a Go struct.
 Both are quite limited and more often than not they are not enough.
-That is why people came up with more sophisticated solutions (based on the built-in ones).</p>
-<h2 id=takeaways>Takeaways</h2>
-<p>So what is the best option?
+That is why people came up with more sophisticated solutions (based on the built-in ones).</p><h2 id=takeaways>Takeaways</h2><p>So what is the best option?
 Well, there isn’t one.
 All described approaches have their pros and cons.
 They depend on your use case and the way your code is meant to be used.
 As with everything in computer science, there is not a single correct solution or a silver bullet.
-It’s all a matter of the tradeoffs you are willing to make.</p>
-<p>If you are writing a library that will be used by hundreds of other projects, backwards-incompatible changes will not be appreciated by your consumers, so you need to choose the more flexible options.
-If you’re working locally in a single codebase, signature changes can be beneficial, because they will enforce that all usages of the methods are adapted.</p>
-<p>If you got to the end of the article, I just want you to know that I recently started this blog,
+It’s all a matter of the tradeoffs you are willing to make.</p><p>If you are writing a library that will be used by hundreds of other projects, backwards-incompatible changes will not be appreciated by your consumers, so you need to choose the more flexible options.
+If you’re working locally in a single codebase, signature changes can be beneficial, because they will enforce that all usages of the methods are adapted.</p><p>If you got to the end of the article, I just want you to know that I recently started this blog,
 and this is the first article in it.
 If it was useful for you, you learned something new, or you think it can be improved feel free to ping me on <a href=https://twitter.com/a_sankov>Twitter</a>, <a href=https://linkedin.com/in/asankov>LinkedIn</a> or <a href=mailto:asankov96+initgo@gmail.com>email</a>.
-I would appreciate the feedback.</p>
-<ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
+I would appreciate the feedback.</p><ul class="list-unstyled d-flex justify-content-between align-items-center mb-0 pt-5">
 <li>
 <a class="btn btn-primary disabled"><span class=mr-1>←</span>Previous</a>
-</li>
-<a class="btn btn-primary disabled">Next<span class=ml-1>→</span></a>
-</li>
-</ul>
-</div>
-</main>
-</div>
-</div>
-<footer class="py-5 row d-print-none bg-nord0">
+</li><a class="btn btn-primary disabled">Next<span class=ml-1>→</span></a>
+</li></ul></div></main></div></div><footer class="py-5 row d-print-none bg-nord0">
 <div class="container-fluid mx-sm-5">
 <div class=row>
 <div class="col-6 col-sm-4 text-xs-center order-sm-2">
@@ -361,38 +270,24 @@ I would appreciate the feedback.</p>
 <a class=text-white target=_blank rel=noopener href=mailto:asankov96@gmail.com aria-label="User mailing list">
 <i class="fa fa-envelope"></i>
 </a>
-</li>
-<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Twitter aria-label=Twitter>
+</li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=Twitter aria-label=Twitter>
 <a class=text-white target=_blank rel=noopener href=https://twitter.com/a_sankov aria-label=Twitter>
 <i class="fab fa-twitter"></i>
 </a>
-</li>
-<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub>
+</li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=GitHub aria-label=GitHub>
 <a class=text-white target=_blank rel=noopener href=https://github.com/asankov aria-label=GitHub>
 <i class="fab fa-github"></i>
 </a>
-</li>
-<li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=LinkedIn aria-label=LinkedIn>
+</li><li class="list-inline-item mx-2 h3" data-toggle=tooltip data-placement=top title=LinkedIn aria-label=LinkedIn>
 <a class=text-white target=_blank rel=noopener href=https://linkedin.com/in/asankov aria-label=LinkedIn>
 <i class="fab fa-linkedin"></i>
 </a>
-</li>
-</ul>
-</div>
-<div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
-</div>
-<div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+</li></ul></div><div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+</div><div class="col-12 col-sm-4 text-center py-2 order-sm-2">
 <small class=text-white>&copy; 2022 Anton Sankov All Rights Reserved</small>
 <small class=ml-1><a href=https://policies.google.com/privacy target=_blank rel=noopener>Privacy Policy</a></small>
-<p class=mt-2><a href=/about/>About Me</a></p>
-</div>
-</div>
-</div>
-</footer>
-</div>
-<script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
+<p class=mt-2><a href=/about/>About Me</a></p></div></div></div></footer></div><script src=https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js integrity=sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN crossorigin=anonymous></script>
 <script src=https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js integrity="sha512-UR25UO94eTnCVwjbXozyeVd6ZqpaAE9naiEUBK/A+QDbfSTQFhPGj5lOR6d8tsgbBk84Ggb5A3EkjsOgPRPcKA==" crossorigin=anonymous></script>
 <script src=/js/tabpane-persist.js></script>
-<script src=/js/main.min.c9cacdeab3629c2f1d7e6dccf34402bdcdb7eb274ee60361963cda70d2660eac.js integrity="sha256-ycrN6rNinC8dfm3M80QCvc236ydO5gNhljzacNJmDqw=" crossorigin=anonymous></script>
-</body>
-</html>
+<script src=/js/main.min.831db95bb375c1a530722aa7ddd4cadc9eb1a45327e9a65b5e09ab097422638c.js integrity="sha256-gx25W7N1waUwciqn3dTK3J6xpFMn6aZbXgmrCXQiY4w=" crossorigin=anonymous></script>
+</body></html>
