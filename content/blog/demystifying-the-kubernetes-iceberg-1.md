@@ -10,9 +10,10 @@ categories:
 
 A while ago, [someone on Reddit published a picture](https://www.reddit.com/r/kubernetes/comments/u9b95u/kubernetes_iceberg_the_bigger_picture_of_what_you/) that I called "The Kubernetes Iceberg."
 
-![The Kubernetes Iceberg meme](/images/kubernetes-iceberg.png)
-
 It represents a vast iceberg, where on the top you have some of the simplest concepts of Kubernetes, and as you go below and underwater, you dive deeper into more advanced Kubernetes subjects.
+This is the picture:
+
+![The Kubernetes Iceberg meme](/images/kubernetes-iceberg.png)
 
 When I saw it, I thought it was brilliant.
 Kubernetes is not easy to start with, and it is precisely like an iceberg.
