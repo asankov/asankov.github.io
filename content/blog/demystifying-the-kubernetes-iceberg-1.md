@@ -1,7 +1,7 @@
 ---
 title: "Demystifying the Kubernetes Iceberg: Part 1"
 linkTitle: "Demystifying the Kubernetes Iceberg: Part 1"
-date: 2022-05-16
+date: 2022-05-15
 description: >
   Kubernetes is like an iceberg. You learn the basics, only to see there is a lot more to learn. The more you learn, the more you see there is to know. This article explains all the concepts listed in the "Kubernetes Iceberg" meme from Reddit.
 categories:
