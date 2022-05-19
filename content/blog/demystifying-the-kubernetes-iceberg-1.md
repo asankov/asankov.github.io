@@ -8,7 +8,8 @@ categories:
   - Kubernetes
 ---
 
-A while ago, [someone on Reddit published a picture](https://www.reddit.com/r/kubernetes/comments/u9b95u/kubernetes_iceberg_the_bigger_picture_of_what_you/) that I called "The Kubernetes Iceberg."
+A while ago, [u/dshurupov](https://www.reddit.com/user/dshurupov/) [published a picture on Reddit](https://www.reddit.com/r/kubernetes/comments/u9b95u/kubernetes_iceberg_the_bigger_picture_of_what_you/) that I called "The Kubernetes Iceberg."
+The picture was made by the folks in [Flant](https://flant.com/).
 
 It represents a vast iceberg, where on the top you have some of the simplest concepts of Kubernetes, and as you go below and underwater, you dive deeper into more advanced Kubernetes subjects.
 This is the picture:
