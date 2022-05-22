@@ -130,7 +130,7 @@ The `Ingress` object is an abstract one. It only provides the configuration. The
 
 This is all for part one.
 I hope you enjoyed it and learned something new.
-I will publish the next article one week from now (23 May 2022).
 
-If you don't want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
-You can also say Hi on any of these socials, or you can find me on [KubeCon](https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/), which I will attend this week.
+The series continues with [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/).
+
+If you don't want to miss on more of my content, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
