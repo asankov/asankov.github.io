@@ -248,7 +248,7 @@ This means that we need to plug in something else that will read these logs and 
 
 Fortunately, Kubernetes has a solution for this.
 It supports a lot of log drivers, which can be integrated with your application logging (without having custom logic in your app).
-These drivers will read data from the container output streams and send the logs to a centralized system like [logz.io](https://logz.io/), [Splunk](https://www.splunk.com/), or [Prometheus](https://prometheus.io/).
+These drivers will read data from the container output streams and send the logs to a centralized system like [logz.io](https://logz.io/), [Splunk](https://www.splunk.com/), or [Loki](https://grafana.com/oss/loki/).
 Once there your logs are safe and they will not be lost, even if a container dies.
 Also, a lot of these systems provide an easy way to aggregate logs from different services and search through the logs based on a keyword, or field-based search (if you have structured logging).
 
@@ -323,8 +323,8 @@ Taints/Tolerations can have different effects, which mean different things:
 
 Some use-cases for Taints are Tolerations are:
 
-- dedicated nodes - if you have different types of nodes, dedicated for different workloads in the same cluster, you can use Taints and Tolerations to make sure each Pods are schedules on the right nodes.
-- nodes with special hardware - if you a set of nodes that have some special hardware (for example, GPUs) you can use Taints and Tolerations to make sure that only the Pods that need that hardware are schedules on these nodes
+- dedicated nodes - if you have different types of nodes, dedicated for different workloads in the same cluster, you can use Taints and Tolerations to make sure each Pods are scheduled on the right nodes.
+- nodes with special hardware - if you a set of nodes that have some special hardware (for example, GPUs) you can use Taints and Tolerations to make sure that only the Pods that need that hardware are scheduled on these nodes
 - eviction - you can implement a logic that adds a `NoExecute` taints on a Node if certain conditions are met.
   This will evict all Pods from that Node and reschedule them on different Nodes.
   Kubernetes uses Taints with the `NoExecute` effect to make sure that no Pods are scheduled on Nodes that are consider not ready or have some sort of hardware issues (disk, CPU) or networking problems (unreachable nodes, etc.)
