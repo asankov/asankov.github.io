@@ -344,6 +344,7 @@ Specifying Resource limits in Kubernetes is optional but highly advisable. If yo
 
 This is all for part two.
 I hope you enjoyed it and learned something new.
-I will publish the next article one week from now (30 May 2022).
+
+The series continues with [Part 3](/blog/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
