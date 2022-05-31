@@ -54,7 +54,8 @@ All workloads running in that cluster can access that `Service`(and the Pods beh
 ### [PID namespace sharing](https://kubernetes.io/docs/tasks/configure-pod-container/share-process-namespace/)
 
 When running containers, they share the host Kernel, but at the same time, they are isolated from one another via cgroups and **namespaces**.
-Namespaces mean “process namespaces.” Each container has its own process namespaces, which means that one container cannot see the processes run by another container (even though they are running on the same host).
+PID Namespaces mean “Process ID Namespaces.”
+Each container has its own process namespaces, which means that one container cannot see the processes run by another container (even though they are running on the same host).
 
 The same applies when running multiple containers in a Pod - they are isolated on the namespace level and do not see each other's processes.
 
