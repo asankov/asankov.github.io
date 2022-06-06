@@ -15,6 +15,10 @@ categories:
 This is the fourth article of the "Demystifying the Kubernetes Iceberg" series.
 My goal for this series is to explain all concepts mentioned in the “Kubernetes Iceberg” diagram by [Flant](https://flant.com/).
 
+This is the iceberg:
+
+![The Kubernetes Iceberg meme](/images/kubernetes-iceberg.png)
+
 In this article, we will dive into Tier 5 of the iceberg.
 Since this tier is huge and would produce a really long article, I decided to split it in two parts.
 
