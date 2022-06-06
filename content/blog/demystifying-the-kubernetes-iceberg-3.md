@@ -312,6 +312,6 @@ With this article we already go into a deep territory and into concepts which yo
 I hope these articles are useful to you and you are learning something new.
 I definitely am while working on them!
 
-I will publish the next article one week from now (06 June 2022).
+The series continues with [Part 4](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
