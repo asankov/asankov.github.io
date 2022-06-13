@@ -18,7 +18,7 @@ This is the iceberg:
 
 ![The Kubernetes Iceberg meme](/images/kubernetes-iceberg.png)
 
-In this article, we will dive continue with Tier 5 of the iceberg.
+In this article, we will continue with Tier 5 of the iceberg.
 We started with the [first part of Tier 5 last week](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/), and today we will pick up where we left off.
 
 You can find the others articles here:
