@@ -466,6 +466,6 @@ In this article, we managed to go over many of the main Kubernetes security conc
 Security is a really important topic in today's world and I believe that every Kubernetes practitioner should know at least a little bit of security.
 I hope that this article can be a good starting point of someone getting into Kubernetes security.
 
-I will publish the next article one week from now (13 June 2022).
+The series continues with [Part 5](/blog/2022/06/02/demystifying-the-kubernetes-iceberg-part-5/).
 
-If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
+If you don’t want to miss an article, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
