@@ -9,6 +9,7 @@ description: >
   This series of articles explains all the concepts listed in the "Kubernetes Iceberg" diagram by Flant.
 categories:
   - Kubernetes
+social_image_path: /images/kubernetes-iceberg.png
 ---
 
 This is the fifth article of the "Demystifying the Kubernetes Iceberg" series.
