@@ -10,6 +10,8 @@ description: >
 categories:
   - Kubernetes
   - Security
+aliases:
+  - /k8s-p4
 ---
 
 This is the fourth article of the "Demystifying the Kubernetes Iceberg" series.
