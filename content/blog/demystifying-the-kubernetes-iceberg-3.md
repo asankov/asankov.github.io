@@ -9,6 +9,8 @@ description: >
   This series of articles explains all the concepts listed in the "Kubernetes Iceberg" meme by Flant.
 categories:
   - Kubernetes
+aliases:
+  - /k8s-p3
 ---
 
 This is the third article of the "Demystifying the Kubernetes Iceberg" series.

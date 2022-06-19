@@ -6,6 +6,8 @@ description: >
   Kubernetes is like an iceberg. You learn the basics, only to see there is a lot more to learn. The more you learn, the more you see there is to know. This article explains all the concepts listed in the "Kubernetes Iceberg" meme from Reddit.
 categories:
   - Kubernetes
+aliases:
+  - /k8s-p1
 ---
 
 A while ago, [u/dshurupov](https://www.reddit.com/user/dshurupov/) [published a picture on Reddit](https://www.reddit.com/r/kubernetes/comments/u9b95u/kubernetes_iceberg_the_bigger_picture_of_what_you/) that I called "The Kubernetes Iceberg."

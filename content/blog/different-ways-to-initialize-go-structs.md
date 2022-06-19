@@ -7,6 +7,8 @@ description: >
   what are their limitations and how to overcome them.
 categories:
   - Go
+aliases:
+  - /go-structs
 ---
 Many languages like Java, C#, etc. have `constructors` that help you instantiate an object and its properties.
 

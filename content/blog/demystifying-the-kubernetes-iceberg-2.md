@@ -6,6 +6,8 @@ description: >
   Kubernetes is like an iceberg. You learn the basics, only to see there is a lot more to learn. The more you learn, the more you see there is to know. This article explains all the concepts listed in the "Kubernetes Iceberg" meme by Flant.
 categories:
   - Kubernetes
+aliases:
+  - /k8s-p2
 ---
 
 This is the second article of the "Demystifying the Kubernetes Iceberg" series.

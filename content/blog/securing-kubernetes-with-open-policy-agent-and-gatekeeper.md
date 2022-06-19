@@ -9,6 +9,8 @@ categories:
   - Open Policy Agent
   - Gatekeeper
   - Security
+aliases:
+  - /k8s-sec-opa
 ---
 
 Over the past 8 years, Kubernetes became the de-facto standard for deploying and managing containerized applications.
