@@ -426,6 +426,6 @@ In the last two article, we managed to demystify the biggest tier of the iceberg
 The next ones are smaller, but are getting more and more specific.
 I don't know about you, but I can't wait to dive into them.
 
-I will publish the next article one week from now (20 June 2022).
+The series continues with [Part 6](/blog/2022/06/27/demystifying-the-kubernetes-iceberg-part-6/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
