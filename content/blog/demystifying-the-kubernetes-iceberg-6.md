@@ -367,6 +367,6 @@ We are almost at the bottom of the iceberg now.
 Just two more layers left until we complete it.
 Thank you for sharing this journey with me.
 
-See you next week when I will publish the next article (04 July 2022).
+The series continues with [Part 7](/blog/2022/07/04/demystifying-the-kubernetes-iceberg-part-7/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
