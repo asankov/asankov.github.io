@@ -319,6 +319,6 @@ This is all for part seven.
 
 Just one more layer left until we crash the whole iceberg!
 
-See you next week when I will publish the next and final article of these series (11 July 2022).
+The series finishes with [Part 8](/blog/2022/07/10/demystifying-the-kubernetes-iceberg-part-8/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
