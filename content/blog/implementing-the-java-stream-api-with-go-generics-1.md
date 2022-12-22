@@ -39,7 +39,7 @@ We can easily change the implementation without changing the code
   (for example, by calling the `parallel` method of the `Stream` object that converts the stream to a parallel one)
 - it utilizes functional-programming patterns (like immutability and pure functions)
 
-Implementing such an API was not impossible in Go before 1.18, but because of the lack of generics, it would have meant that we needed to implement this API each time for each different type.
+Implementing such an API was not impossible in [Go before 1.18](https://go.dev/blog/intro-generics), but because of the lack of generics, it would have meant that we needed to implement this API each time for each different type.
 Not ideal.
 
 Generics solve this problem, and it is precisely in use cases like this that their benefit is visible.
@@ -320,7 +320,7 @@ This is another thing that is missing from my implementation.
 
 ## Summary
 
-Go 1.18 introduced a big change in the language adding support for type-parameters.
+Go 1.18 introduced a big change in the language [adding support for type-parameters](https://go.dev/blog/intro-generics).
 
 This made it more easy to implement generic data-structures like Streams.
 
