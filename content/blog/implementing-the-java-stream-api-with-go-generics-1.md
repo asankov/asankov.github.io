@@ -355,3 +355,5 @@ Even though, I had a good fun implementing this and finally did something practi
 Nevertheless, I still intent to fix all left-overs I outlined in the previous paragraph and have even more fun doing it, so stay tuned for Part 2.
 
 Until then, Merry Christmas and a Happy New Year! 🎅
+
+Enjoyed the post? If you don't want to miss the next one, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
