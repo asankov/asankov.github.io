@@ -175,6 +175,15 @@ These include `Stream.of` , `Stream.generate`, `Stream.iterate`, etc.
 Go does not have static methods, but does have package methods not attached to the type, so we can use that for these methods.
 That way the usage of these methods in Java and Go will look similar:
 
+### No Optional
+
+Since Java is notorious for its [`NullPointerException`](https://docs.oracle.com/javase/7/docs/api/java/lang/NullPointerException.html) in Java 8 the `Optional<T>` type was introduced.
+This is a generic type that holds a value of type `T` OR `null` and it provides useful methods for working with the value.
+
+I decided not to implement this type and instead to work with raw Go pointers, because in Go not everything is a pointer and it's not that easy to get a nil-derefence error.
+
+All methods from the Java interface that return `Optional<T>` will return `*T` in my Go interface.
+
 ```java
 var s = Stream.of(1, 2, 3)
 ```
