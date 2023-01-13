@@ -1,9 +1,9 @@
 ---
-title: "#90DaysOfDevOps - Continuous Build, Integration and Testing"
-linkTitle: "#90DaysOfDevOps - Continuous Build, Integration and Testing"
+title: "90DaysOfDevOps - Continuous Build, Integration and Testing"
+linkTitle: "90DaysOfDevOps - Continuous Build, Integration and Testing"
 date: 2023-01-13
 description: >
-    #90DaysOfDevOps is a 90 day journey into the world of DevOps.
+    90DaysOfDevOps is a 90 day journey into the world of DevOps.
     This year, I am contributing some articles on the topic of Continuous Build, Integration and Testing.
     Follow the links and start your DevOps journey.
 categories:
