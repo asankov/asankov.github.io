@@ -11,6 +11,7 @@ name: Anton Sankov
 bio: Senior Software Engineer, currently dedicated to the Cloud Native Security space.
 mail: asankov96@gmail.com
 github: asankov
+downloadLink: https://github.com/asankov/cv/raw/main/cv.pdf
 companies:
   - name: VMware Carbon Black
     location: Sofia, Bulgaria (remote team)

@@ -21,7 +21,14 @@
   <div>
     <main role="main" class="td-main">
       <div style="padding: 70px 20px;">
-        <h1>{{ .Params.name }}</h1>
+        <div style="display: flex; justify-content: space-between;">
+          <h1>{{ .Params.name }}</h1>
+          {{ if .Params.downloadLink }}
+          <a href="{{ .Params.downloadLink }}">
+            <button style="margin-right: 15px; border-radius: 10px; background-color: black;color: white; font-weight: bold; padding: 10px 20px;"> Download PDF <i class="fa-solid fa-download"></i> </button>
+          </a>
+          {{ end }}
+        </div>
 
         <h2 style="font-size: 20px; font-weight: normal;">{{ .Params.bio }}</h2>
 
