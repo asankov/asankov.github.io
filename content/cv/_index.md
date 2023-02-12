@@ -185,4 +185,6 @@ conferences:
     - name: Building The Twelve-Factor App
       summary: |
         This talks explains <a href="https://12factor.net/" target="_blank">The Twelve-Factor App methodology</a> and why it is still relevant today in the world of Kubernetes, containers and microservices.
+      links:
+        slides: https://asankov.dev/twelve-factor-app/#/
 ---
