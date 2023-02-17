@@ -90,6 +90,34 @@ companies:
     - learn how to work in a team
     tech: Java EE, SAP Cloud Platform, SAP UI5
 
+openSource:
+  - name: Kiwi TCMS
+    location: Sofia, Bulgaria (working remotely)
+    positions:
+    - position: Core Team Member
+      dates: November 2017 - Present
+    info: |
+      Got involved in the project to gain more experience in the software development world.
+    responsibilities:
+    - write clean and maintainable code, do code reviews, onboard new team members
+    - make and execute a plan to refactor ~2000 pylint warnings
+    - work on refactoring older pages to modern JS code with latest version of <a href="https://www.patternfly.org/v4/" target="_blank">Patternfly</a>
+    - work and lead the <a href="https://kiwitcms.org/blog/kiwi-tcms-team/2019/03/03/legacy-reports-become-telemetry/" target="_blank">Telemetry</a> initiative
+    - man the project booth at conferences, and speak to potential customers and contributors
+    tech: Python, Django, JavaScript, jQuery, Patternfly
+  - name: 90DaysOfDevOps (Second Edition)
+    location: GitHub
+    positions:
+    - position: Contributor
+      dates: January 2023
+    info: |
+      Contributed 14 articles for the <a href="https://github.com/MichaelCade/90DaysOfDevOps/" target="_blank">90DaysOfDevOps</a> initiative.
+    responsibilities:
+    - "<a href=\"https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2023.md#continuous-build-integration-testing\" target=\"_blank\">Days 14-20: Continuous Build, Integration, Testing</a>"
+    - "<a href=\"https://github.com/MichaelCade/90DaysOfDevOps/blob/main/2023.md#continuous-delivery--deployment\" target=\"_blank\">Days 22-27: Continuous Delivery & Deployment</a>"
+    tech: DevOps, DevSecOps
+
+
 conferences:
   - name: VMware Explore 2022
     date: November 2022
@@ -187,4 +215,24 @@ conferences:
         This talks explains <a href="https://12factor.net/" target="_blank">The Twelve-Factor App methodology</a> and why it is still relevant today in the world of Kubernetes, containers and microservices.
       links:
         slides: https://asankov.dev/twelve-factor-app/#/
+  - name: HackConf 2019
+    date: October 2019
+    location: Sofia, Bulgaria
+    talks:
+    - name: Learn Python & Selenium the fast way
+      summary: |
+        A three-hour workshop that goes over the basics of Python in the first part and then shows how to use Selenium with Python in the second part.
+      with: Alexandar Todorov
+      links:
+        notes: https://github.com/asankov/qa-automation-python-selenium-101
+  - name: HackConf 2017
+    date: October 2017
+    location: Sofia, Bulgaria
+    talks:
+    - name: Learn Python & Selenium the fast way
+      summary: |
+        A six-hour workshop that goes over the basics of Python in the first part and then shows how to use Selenium with Python in the second part.
+      with: Alexandar Todorov
+      links:
+        notes: https://github.com/asankov/qa-automation-python-selenium-101
 ---

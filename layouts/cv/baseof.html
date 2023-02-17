@@ -69,6 +69,35 @@
         </div>
         {{ end }}
 
+        <h2>Open Source work</h2>
+        {{ range $openSource := .Params.openSource }}
+        <div style="display: flex; justify-content: space-between;">
+          <h3>{{ $openSource.name }}</h3>
+          <div class="bold"><i class="fa-solid fa-location-dot"></i> {{ $openSource.location }}</div>
+        </div>
+        {{ range $positions := $openSource.positions }}
+        <div class="bold" style="display: flex; justify-content: space-between; padding: 5px 0;">
+          <div class="bold">{{ $positions.position }}</div>
+          <div><i class="fa-regular fa-calendar"></i> {{ $positions.dates }}</div>
+        </div>
+        {{ end }}
+        <div>
+          <p style="width: 70%;">
+            {{ $openSource.info | safeHTML }}
+
+          <h3>Responsibilities</h3>
+          <ul>
+            {{ range $resp := $openSource.responsibilities }}
+            <li>{{ $resp | safeHTML }}</li>
+            {{ end }}
+          </ul>
+
+          <h3>Tech</h3>
+          <div><i class="fa-solid fa-gear"></i> {{ $openSource.tech }}</div>
+          </p>
+        </div>
+        {{ end }}
+
         <h2 id="public-talks">Public talks</h2>
 
         {{ range $conf := .Params.conferences }}
