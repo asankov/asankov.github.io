@@ -119,6 +119,20 @@ openSource:
 
 
 conferences:
+  - name: BSides Sofia 2023
+    date: March 2023
+    location: Sofia, Bulgaria
+    talks:
+    - name: How to automate Application Security the DevSecOps way
+      type: Workshop
+      with: Svetlomir Balevski
+      summary: |
+        This workshop shows the audience what DevSecOps is, by doing a practical overview of the steps in a DevSecOps CI/CD Pipeline.
+        It goes through the different stages of the Pipeline, showing different steps in the process of building a secure application.
+        It shows things like SAST, SCA, Container image scanning, IAST, and DAST.
+        The workshop includes implementing a CI/CD pipeline that runs this checks for a certain application.
+      links:
+        notes: https://github.com/asankov/how-to-automate-application-security-the-DevSecOps-way-workshop
   - name: VMware Explore 2022
     date: November 2022
     location: Barcelona, Spain
