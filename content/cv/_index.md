@@ -121,7 +121,7 @@ openSource:
 conferences:
   - name: VMware Bulgaria Tech Meetups
     date: May 2023
-    location: Sofia, Bulgaria
+    location: Sofia, Bulgaria 🇧🇬
     talks:
     - name: Cloud Native Security - From Development to Runtime
       with: Martin Georgiev
@@ -135,7 +135,7 @@ conferences:
         slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
   - name: BSides Sofia 2023
     date: March 2023
-    location: Sofia, Bulgaria
+    location: Sofia, Bulgaria 🇧🇬
     talks:
     - name: How to automate Application Security the DevSecOps way
       type: Workshop
@@ -149,7 +149,7 @@ conferences:
         notes: https://github.com/asankov/how-to-automate-application-security-the-DevSecOps-way-workshop
   - name: VMware Explore 2022
     date: November 2022
-    location: Barcelona, Spain
+    location: Barcelona, Spain 🇪🇸
     talks:
     - type: Panel
       name: Day in The Life of a Cross Functional Security War Room
@@ -160,7 +160,7 @@ conferences:
         notes: https://blogs.vmware.com/explore/2022/10/27/day-0-the-security-mindset-changing-the-way-you-think-about-enterprise-security/
   - name: KubeHuddle 2022
     date: October 2022
-    location: Edinburgh, Scotland
+    location: Edinburgh, Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿
     talks:
     - name: Securing Kubernetes with Open Policy Agent
       summary: |
@@ -172,7 +172,7 @@ conferences:
         slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/2022/kubehuddle-edinburgh/presentation.pdf
   - name: OSCAL 2022
     date: June 2022
-    location: Tirana, Albania
+    location: Tirana, Albania 🇦🇱
     talks:
     - name: Securing Kubernetes with Open Policy Agent
       summary: |
@@ -191,7 +191,7 @@ conferences:
         notes: https://github.com/asankov/go-101-workshop
   - name: BSides Sofia 2022
     date: April 2022
-    location: Sofia, Bulgaria
+    location: Sofia, Bulgaria 🇧🇬
     talks:
     - name: Securing Kubernetes with Open Policy Agent
       summary: |
@@ -203,7 +203,7 @@ conferences:
         slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/2022/bsides-sofia/presentation.pdf
   - name: ISTA 2021
     date: November 2021
-    location: Virtual
+    location: Virtual 🌎
     talks:
     - name: "Kubernetes Extensibility: Next Phases of Kubernetes"
       summary: |
@@ -214,7 +214,7 @@ conferences:
         slides: https://github.com/asankov/kubernetes-extensibility/blob/main/slides.pptx
   - name: HackConf 2021
     date: October 2021
-    location: Virtual
+    location: Virtual 🌎
     talks:
     - name: Go 101
       type: Workshop
@@ -226,7 +226,7 @@ conferences:
         notes: https://github.com/asankov/go-101-workshop
   - name: DevConf.CZ 2020
     date: January 2020
-    location: Brno, Czech Republic
+    location: Brno, Czech Republic 🇨🇿
     talks:
     - name: Building The Twelve-Factor App
       summary: |
@@ -236,7 +236,7 @@ conferences:
         slides: https://asankov.dev/twelve-factor-app/#/
   - name: OpenExpo Europe 2019
     date: June 2019
-    location: Madrid, Spain
+    location: Madrid, Spain 🇪🇸
     talks:
     - name: Building The Twelve-Factor App
       summary: |
@@ -245,7 +245,7 @@ conferences:
         slides: https://asankov.dev/twelve-factor-app/#/
   - name: HackConf 2019
     date: October 2019
-    location: Sofia, Bulgaria
+    location: Sofia, Bulgaria 🇧🇬
     talks:
     - name: Learn Python & Selenium the fast way
       summary: |
@@ -255,7 +255,7 @@ conferences:
         notes: https://github.com/asankov/qa-automation-python-selenium-101
   - name: HackConf 2017
     date: October 2017
-    location: Sofia, Bulgaria
+    location: Sofia, Bulgaria 🇧🇬
     talks:
     - name: Learn Python & Selenium the fast way
       summary: |
