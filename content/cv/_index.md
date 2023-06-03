@@ -119,6 +119,20 @@ openSource:
 
 
 conferences:
+  - name: VMware Bulgaria Tech Meetups
+    date: May 2023
+    location: Sofia, Bulgaria
+    talks:
+    - name: Cloud Native Security - From Development to Runtime
+      with: Martin Georgiev
+      summary: |
+        Comprehensive overview of how to ensure the security of Cloud Native infrastructure at every stage of the container lifecycle.
+        Covering the complete application lifecycle, starting with the Development stage, including topics such as selecting the rightbase image, managing package dependencies, and implementing secure coding practices.
+        Finishing with the Distribute and Deploy phases of the lifecycle, and the Runtime aspects of Cloud Native Security.
+      links:
+        notes: https://gitlab.com/asankov/cloud-native-security/
+        youtube: https://youtu.be/VMFFsfeNpKk
+        slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
   - name: BSides Sofia 2023
     date: March 2023
     location: Sofia, Bulgaria
