@@ -119,6 +119,18 @@ openSource:
 
 
 conferences:
+  - name: Intro to Containers at College of Technology "A.S.Popov“
+    date: June 2023
+    location: Sofia, Bulgaria 🇧🇬
+    talks:
+    - name: Intro to Containers
+      summary: |
+        I was invited to a local high-school to give a lecture on Containers to the students from the Computer Science classes.
+        The presentation was tailored to their programming experience (C# and .NET) and gave them basic overview of what containers are,
+        how and why to use them.
+      links:
+        notes: https://github.com/asankov/intro-to-containers/
+        slides: https://github.com/asankov/intro-to-containers/blob/main/intro-to-containers.pdf
   - name: VMware Bulgaria Tech Meetups
     date: May 2023
     location: Sofia, Bulgaria 🇧🇬
