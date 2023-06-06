@@ -119,7 +119,7 @@ openSource:
 
 
 conferences:
-  - name: Intro to Containers at College of Technology "A.S.Popov“
+  - name: Intro to Containers at Vocational High School for Audio, Video, and Telecommunications "A.S.Popov“
     date: June 2023
     location: Sofia, Bulgaria 🇧🇬
     talks:
