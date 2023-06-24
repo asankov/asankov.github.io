@@ -205,7 +205,8 @@ conferences:
     date: May 2022
     location: San Francisco, USA 🇺🇸
     talks:
-    - name: Panel: Building High-Performance Applications with Go
+    - name: Building High-Performance Applications with Go
+      type: Panel
       summary: |
         VMware RADIO is the biggest internal annual VMware Conference for Innovation.<br>
         I was part of a panel discussion about different ways to use the Go programming language to build high-performance web (and not only) applications.
