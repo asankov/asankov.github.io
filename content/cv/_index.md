@@ -201,6 +201,14 @@ conferences:
         The workshop is three-hours long, it starts with defining a functions, variables, etc. and ends with writing complex structs and attaching some sort of behavior to them.
       links:
         notes: https://github.com/asankov/go-101-workshop
+  - name: VMware RADIO 2022
+    date: May 2022
+    location: San Francisco, USA 🇺🇸
+    talks:
+    - name: Panel: Building High-Performance Applications with Go
+      summary: |
+        VMware RADIO is the biggest internal annual VMware Conference for Innovation.<br>
+        I was part of a panel discussion different ways to use the Go programming language to build high-performance web (and not only) applications.
   - name: BSides Sofia 2022
     date: April 2022
     location: Sofia, Bulgaria 🇧🇬
