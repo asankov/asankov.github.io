@@ -208,7 +208,7 @@ conferences:
     - name: Panel: Building High-Performance Applications with Go
       summary: |
         VMware RADIO is the biggest internal annual VMware Conference for Innovation.<br>
-        I was part of a panel discussion different ways to use the Go programming language to build high-performance web (and not only) applications.
+        I was part of a panel discussion about different ways to use the Go programming language to build high-performance web (and not only) applications.
   - name: BSides Sofia 2022
     date: April 2022
     location: Sofia, Bulgaria 🇧🇬
