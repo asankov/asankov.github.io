@@ -119,6 +119,34 @@ openSource:
 
 
 conferences:
+  - name: MooseCon 2023 (Internal VMware event)
+    date: September 2023
+    location: Sofia, Bulgaria 🇧🇬
+    talks:
+    - name: Cloud Native Security - From Development to Runtime
+      with: Martin Georgiev
+      summary: |
+        MooseCon is an internal VMware Security Conference.<br>
+        This sessions is a comprehensive overview of how to ensure the security of Cloud Native infrastructure at every stage of the container lifecycle.
+        Covering the complete application lifecycle, starting with the Development stage, including topics such as selecting the rightbase image, managing package dependencies, and implementing secure coding practices.
+        Finishing with the Distribute and Deploy phases of the lifecycle, and the Runtime aspects of Cloud Native Security.
+      links:
+        notes: https://gitlab.com/asankov/cloud-native-security/
+        slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
+  - name: RADIO@EMEA 2023 (Internal VMware event)
+    date: September 2023
+    location: Sofia, Bulgaria 🇧🇬
+    talks:
+    - name: Cloud Native Security - From Development to Runtime
+      with: Martin Georgiev
+      summary: |
+        RADIO@EMEA is the EMEA edition of RADIO - the biggest internal annual VMware Conference for Innovation.<br>
+        This sessions is a comprehensive overview of how to ensure the security of Cloud Native infrastructure at every stage of the container lifecycle.
+        Covering the complete application lifecycle, starting with the Development stage, including topics such as selecting the rightbase image, managing package dependencies, and implementing secure coding practices.
+        Finishing with the Distribute and Deploy phases of the lifecycle, and the Runtime aspects of Cloud Native Security.
+      links:
+        notes: https://gitlab.com/asankov/cloud-native-security/
+        slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
   - name: Intro to Containers at Vocational High School for Audio, Video, and Telecommunications "A.S.Popov“
     date: June 2023
     location: Sofia, Bulgaria 🇧🇬
