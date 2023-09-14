@@ -180,8 +180,8 @@ conferences:
         Then it guides the audience on how to implement proper admission control using two open-source projects - <a href="https://www.openpolicyagent.org/" target="_blank">Open Policy Agent</a> and <a href="https://github.com/open-policy-agent/gatekeeper" target="_blank">Gatekeeper</a>.
       links:
         youtube: https://www.youtube.com/live/DcOYB4cUM9U?feature=share&t=12186
-        notes: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/tree/main/2022/kubehuddle-edinburgh
-        slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/2022/kubehuddle-edinburgh/presentation.pdf
+        notes: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
+        slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/kubehuddle-edinburgh-2022.pdf
   - name: OSCAL 2022
     date: June 2022
     location: Tirana, Albania 🇦🇱
@@ -191,8 +191,8 @@ conferences:
         This talk explains why admission control in Kubernetes clusters is important, and what bad things can happen due to workload misconfiguration.
         Then it guides the audience on how to implement proper admission control using two open-source projects - <a href="https://www.openpolicyagent.org/" target="_blank">Open Policy Agent</a> and <a href="https://github.com/open-policy-agent/gatekeeper" target="_blank">Gatekeeper</a>.
       links:
-        notes: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/tree/main/2022/oscal-tirana
-        slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/2022/oscal-tirana/presentation.pdf
+        notes: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
+        slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/oscal-tirana-2022.pdf
     - name: Go 101
       type: Workshop
       with: Boris Stoyanov
@@ -220,8 +220,8 @@ conferences:
         Then it guides the audience on how to implement proper admission control using two open-source projects - <a href="https://www.openpolicyagent.org/" target="_blank">Open Policy Agent</a> and <a href="https://github.com/open-policy-agent/gatekeeper" target="_blank">Gatekeeper</a>.
       links:
         youtube: https://www.youtube.com/watch?v=JewdgJASVxI
-        notes: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/tree/main/2022/bsides-sofia
-        slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/2022/bsides-sofia/presentation.pdf
+        notes: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
+        slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/bsides-sofia-2022.pdf
   - name: ISTA 2021
     date: November 2021
     location: Virtual 🌎
