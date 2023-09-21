@@ -119,6 +119,15 @@ openSource:
 
 
 conferences:
+  - name: VMware SaaS Meetup Community Summit
+    date: September 2023
+    location: Sofia, Bulgaria 🇧🇬
+    talks:
+    - name: VMware SaaS Meetup Community Summit
+      with: Martin Georgiev, Yavor Boychev, Alexander Dimitrov, Alexander Bonev
+      summary: |
+        In this meetup, we recapped the previous VMware SaaS Tech Meetups, including the one about Cloud Native Security.
+        We expanded on the topics, and had a free-form discussion with the audience about SaaS teams, organizations and security.
   - name: MooseCon 2023 (Internal VMware event)
     date: September 2023
     location: Sofia, Bulgaria 🇧🇬
