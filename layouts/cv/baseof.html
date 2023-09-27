@@ -25,7 +25,9 @@
           <h1>{{ .Params.name }}</h1>
           {{ if .Params.downloadLink }}
           <a href="{{ .Params.downloadLink }}">
-            <button style="margin-right: 15px; border-radius: 10px; background-color: black;color: white; font-weight: bold; padding: 10px 20px;"> Download PDF <i class="fa-solid fa-download"></i> </button>
+            <button
+              style="margin-right: 15px; border-radius: 10px; background-color: black;color: white; font-weight: bold; padding: 10px 20px;">
+              Download PDF <i class="fa-solid fa-download"></i> </button>
           </a>
           {{ end }}
         </div>
@@ -33,8 +35,10 @@
         <h2 style="font-size: 20px; font-weight: normal;">{{ .Params.bio }}</h2>
 
         <div style="display: flex">
-          <div><i class="fa-regular fa-envelope fa-xl"></i> <a href="mailto:{{ .Params.mail }}" target="_blank">{{ .Params.mail }}</a></div>
-          <div style="padding-left: 20px"><i class="fa-brands fa-github fa-xl"></i> <a href="https://github.com/{{ .Params.github }}" target="_blank">{{ .Params.github }}</a></div>
+          <div><i class="fa-regular fa-envelope fa-xl"></i> <a href="mailto:{{ .Params.mail }}" target="_blank">{{
+              .Params.mail }}</a></div>
+          <div style="padding-left: 20px"><i class="fa-brands fa-github fa-xl"></i> <a
+              href="https://github.com/{{ .Params.github }}" target="_blank">{{ .Params.github }}</a></div>
           <div style="padding-left: 20px"><i class="fa-solid fa-phone fa-xl"></i> +359 892 456 130</div>
           <div style="padding-left: 20px"><i class="fa-solid fa-location-dot"></i> Sofia, Bulgaria </div>
         </div>
@@ -54,7 +58,28 @@
         {{ end }}
         <div>
           <p style="width: 70%;">
-            {{ $company.info | safeHTML }}
+            {{/* {{ $company.info | safeHTML }} */}}
+
+          <div>
+            {{ $company.info }}
+          </div>
+          {{ if $company.additionalInfo }}
+          <ul>
+            {{ range $additionalInfo := $company.additionalInfo }}
+            <li>
+              {{ if $additionalInfo.titleLink }}
+              <a href="{{ $additionalInfo.titleLink }}" target="_blank">
+                <span class="bold">{{$additionalInfo.title}}:</span>
+              </a>
+              {{ else }}
+              <span class="bold">{{$additionalInfo.title}}:</span>
+              {{end}}
+
+              {{ $additionalInfo.body }}
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
 
           <h3>Responsibilities</h3>
           <ul>
@@ -110,20 +135,24 @@
             </div>
           </div>
           {{ range $i, $talk := $conf.talks}}
-          <div {{ if gt $i 0 }}style="padding-top: 5px;"{{ end }}>
-            <div> {{ $talk.type }}{{ if $talk.type }}:{{end}} <span class="bold">{{ $talk.name }}</span>{{ if $talk.with }} (with {{ $talk.with }}){{ end }}</div>
+          <div {{ if gt $i 0 }}style="padding-top: 5px;" {{ end }}>
+            <div> {{ $talk.type }}{{ if $talk.type }}:{{end}} <span class="bold">{{ $talk.name }}</span>{{ if $talk.with
+              }} (with {{ $talk.with }}){{ end }}</div>
             <div style="width: 70%">{{ $talk.summary | safeHTML }}</div>
 
             {{ if $talk.links }}
             <div style="padding-top: 10px;">
               {{ if $talk.links.youtube }}
-              <a href="{{ $talk.links.youtube }}" target="_blank" style="padding-left: 5px;"><i class="fa-brands fa-youtube fa-2x"></i></a>
+              <a href="{{ $talk.links.youtube }}" target="_blank" style="padding-left: 5px;"><i
+                  class="fa-brands fa-youtube fa-2x"></i></a>
               {{ end }}
               {{ if $talk.links.notes }}
-              <a href="{{ $talk.links.notes }}" target="_blank" style="padding-left: 5px;"><i class="fa-regular fa-note-sticky fa-2x"></i></a>
+              <a href="{{ $talk.links.notes }}" target="_blank" style="padding-left: 5px;"><i
+                  class="fa-regular fa-note-sticky fa-2x"></i></a>
               {{ end }}
               {{ if $talk.links.slides }}
-              <a href="{{ $talk.links.slides }}" target="_blank" style="padding-left: 5px;"><i class="fa-brands fa-slideshare fa-2x" alt="Slides"></i></a>
+              <a href="{{ $talk.links.slides }}" target="_blank" style="padding-left: 5px;"><i
+                  class="fa-brands fa-slideshare fa-2x" alt="Slides"></i></a>
               {{ end }}
             </div>
             {{ end }}
@@ -131,7 +160,7 @@
           {{ end }}
           {{ end }}
         </div>
-        </div>
+      </div>
     </main>
 
   </div>
