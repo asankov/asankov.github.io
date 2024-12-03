@@ -41,7 +41,7 @@ This includes:
 
 If you want to have an additional logic around your resource, e.g. trigger some actions when someone creates an instance of our CRD, you can do that by implementing an operator (more on that in later posts).
 
-You can check out my [presentation](<(https://www.youtube.com/watch?v=yim8NnYjODY)>) from ISTA 2021 about how to use CRD to build a CRUD application backend.
+You can check out my [presentation](https://www.youtube.com/watch?v=yim8NnYjODY) from ISTA 2021 about how to use CRD to build a CRUD application backend.
 
 ### PersistentVolumeClaim
 
