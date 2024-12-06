@@ -146,6 +146,18 @@ openSource:
     tech: DevOps, DevSecOps
 
 conferences:
+  - name: Go Meetup Vilnius
+    date: November 2024
+    location: Vilnius, Lithuania 🇱🇹
+    talks:
+      - name: The Inner Workings of Go Generics
+        summary: |
+          Talk that goes deep into how generics work in the Go programming language.
+          Starting from the history of the feature and why it took 12 years to be implemented, going into how exactly it works,
+          why it was designed this way and what are the trade-offs of this and the other proposed implementations.
+        links:
+          youtube: https://www.youtube.com/live/oJ86gojyZiU?si=UEz-Cy3P4RWq3nSp&t=2110
+          notes: https://github.com/asankov/go-generics/
   - name: VMware SaaS Meetup Community Summit
     date: September 2023
     location: Sofia, Bulgaria 🇧🇬
