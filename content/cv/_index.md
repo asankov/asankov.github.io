@@ -123,7 +123,7 @@ openSource:
     location: Sofia, Bulgaria (working remotely)
     positions:
       - position: Core Team Member
-        dates: November 2017 - Present
+        dates: November 2017 - June 2022
     info: |
       Got involved in the project to gain more experience in the software development world.
     responsibilities:
