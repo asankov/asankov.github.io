@@ -12,16 +12,13 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  const basename = import.meta.env.PROD
-    ? `/${import.meta.env.VITE_BASE_PATH}`
-    : undefined;
-
+  // No basename needed for custom domain at root level
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={basename}>
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/post/:slug" element={<BlogPost />} />
