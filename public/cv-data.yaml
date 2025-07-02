@@ -1,0 +1,394 @@
+personal:
+  name: "Anton Sankov"
+  title: "Staff Software Engineer"
+  description: "Staff Software Engineer, currently building AI apps that automate your Kubernetes operations"
+
+contact:
+  email: "anton@asankov.dev"
+  phone: ""
+  linkedin: "Anton Sankov"
+  linkedinLink: "https://www.linkedin.com/in/asankov/"
+  github: asankov
+  downloadLink: "https://github.com/asankov/cv/raw/main/cv.pdf"
+
+summary: "Staff Software Engineer with extensive experience in Cloud Native Security, Kubernetes, and Go development. Strong background in building scalable microservices, container security products, and developer tooling. Active open source contributor and international conference speaker with expertise in DevSecOps and software architecture."
+
+experience:
+  - title: "Staff Software Engineer"
+    company: "Cast AI"
+    location: "Sofia, Bulgaria (Remote)"
+    period: "March 2024 - Present"
+    positions:
+      - title: "Staff Software Engineer"
+        period: "March 2025 - Present"
+      - title: "Senior Software Engineer"
+        period: "March 2024 - March 2025"
+    responsibilities:
+      - "Working on the Security product, part of the Cast Automation Platform"
+      - "Developing Attack Paths: graph-based detection of attack vectors exposed and waiting to be exploited"
+      - "Building Image Scanning: scanning container images, providing information about vulnerable container images and possible remediation"
+      - "Implementing Compliance: rule-based checks for violation of industry-defined compliance standards and best practices"
+      - "Writing clean and maintainable code, doing code reviews, onboarding new team members"
+      - "Communicating with internal and external stakeholders (PM, UX, customers)"
+      - "Writing technical documents (Engineering Analysis, write-ups, RFCs, customer-facing product documentation)"
+      - "Presenting the work of our team in company-wide meetings and demos"
+      - "Participating in the hiring process and leading the Dev Wars Guild"
+    skills:
+      - Go
+      - gRPC
+      - eBPF
+      - Kubernetes
+      - Helm
+      - PostgreSQL
+      - Terraform
+      - GCP PubSub
+
+  - title: "Senior Member of Technical Staff"
+    company: "VMware Carbon Black"
+    location: "Sofia, Bulgaria (remote team)"
+    period: "January 2022 - February 2024"
+    positions:
+      - title: "Senior Member of Technical Staff"
+        period: "January 2022 - February 2024"
+      - title: "Member of Technical Staff"
+        period: "June 2020 - January 2022"
+    responsibilities:
+      - "Worked on the Carbon Black Cloud Container Security product providing end-to-end Kubernetes Security"
+      - "Developed Hardening: detecting misconfigurations in Kubernetes resources and enforcing policies"
+      - "Built Image Scanning: scanning container images, integrated with Hardening, ability to block images from being deployed"
+      - "Implemented Rundate: runtime monitoring and protection, detecting anomalies in network activity"
+      - "Wrote clean and maintainable code, did code reviews, onboarded new team members"
+      - "Communicated with internal and external stakeholders across Bulgaria, Israel, India and USA"
+      - "Wrote technical documents (RFCs/JEDIs/TASAs, Engineering Analysis, customer-facing product documentation)"
+      - "Presented team work on BU-wide meetings and demos, and external events"
+      - "Participated in hiring process, helped grow the BU in Sofia from 4 to >100 people"
+      - "Participated in VMware Talent Boost Academy for students"
+    skills:
+      - Go
+      - gRPC
+      - Kubernetes
+      - Helm
+      - MongoDB
+      - Terraform
+      - Kafka
+
+  - title: "Software Engineer"
+    company: "Docker Inc./ Mirantis Inc."
+    location: "Sofia, Bulgaria (remote team)"
+    positions:
+      - title: "Software Engineer"
+        period: "August 2019 - June 2020"
+    responsibilities:
+      - "Worked on products part of the Docker Enterprise (Docker EE) stack"
+      - "Developed SaaS multi-cluster management product (scrapped after Mirantis acquisition)"
+      - "Integrated Istio Ingress into UCP (Universal Control Plane) - Kubernetes/Swarm distro"
+      - "Built Launchpad - CLI tool for installing Docker EE products"
+      - "Wrote clean and maintainable code, did code reviews, onboarded new team members"
+      - "Communicated with internal and external stakeholders (PM, UX, QA)"
+      - "Wrote technical documents and presented team work in company-wide meetings"
+    skills:
+      - Go
+      - gRPC
+      - Docker
+      - Kubernetes
+      - PostgreSQL
+
+  - title: "Software Engineer"
+    company: "Paysafe"
+    location: "Sofia, Bulgaria"
+    period: "May 2018 - August 2019"
+    positions:
+      - title: "Software Engineer"
+        period: "April 2019 - August 2019"
+      - title: "Junior Software Engineer"
+        period: "May 2018 - April 2019"
+    responsibilities:
+      - "Worked on integrating crypto-currency trading into company's digital wallets - Skrill and Neteller"
+      - "Did full-stack work - both back-end and front-end"
+      - "Communicated with internal and external stakeholders (PM, UX, Legal, Compliance, Accounting)"
+      - "Participated in hiring process, helped grow the team from 4 to 20 people"
+      - "Presented team work in company-wide meetings and demos"
+    skills:
+      - Java SE/EE
+      - Spring (Boot) - Netflix Stack
+      - SQL
+      - Angular 2+
+
+  - title: "Software Engineering Intern"
+    company: "SAP Labs Bulgaria"
+    location: "Sofia, Bulgaria"
+    positions:
+      - title: "Software Engineering Intern"
+        period: "June 2017 - December 2017"
+    responsibilities:
+      - "Worked on the provisioning framework of SAP Cloud Platform"
+      - "Started with a month of learning and building own project"
+      - "Joined the team and worked full-time on team priorities"
+      - "Did full-stack work - both back-end and front-end"
+      - "Learned how to work in a team environment"
+    skills:
+      - Java EE
+      - SAP Cloud Platform
+      - SAP UI5
+
+openSourceContributions:
+  - company: "Kiwi TCMS (Open Source)"
+    location: "Sofia, Bulgaria (working remotely)"
+    period: "November 2017 - June 2022"
+    positions:
+      - title: "Core Team Member"
+        period: "November 2017 - June 2022"
+    responsibilities:
+      - "Wrote clean and maintainable code, did code reviews, onboarded new team members"
+      - "Made and executed a plan to refactor ~2000 pylint warnings"
+      - "Worked on refactoring older pages to modern JS code with latest version of Patternfly"
+      - "Worked and led the Telemetry initiative"
+      - "Manned the project booth at conferences, and spoke to potential customers and contributors"
+    skills:
+      - Python
+      - Django
+      - JavaScript
+      - jQuery
+      - Patternfly
+  - company: "90DaysOfDevOps (Second Edition)"
+    location: "GitHub"
+    positions:
+      - title: "Contributor"
+        period: "January 2023"
+    responsibilities:
+      - "Contributed 14 articles for the 90DaysOfDevOps initiative"
+      - "Days 14-20: Continuous Build, Integration, Testing"
+      - "Days 22-27: Continuous Delivery & Deployment"
+    skills:
+      - DevOps
+      - DevSecOps
+
+talks:
+  - venue: "FOSDEM 2025"
+    date: "February 2025"
+    location: "Brussels, Belgium 🇧🇪"
+    sessions:
+      - name: "The Inner Workings of Go Generics"
+        summary: "Talk that goes deep into how generics work in the Go programming language. Starting from the history of the feature and why it took 12 years to be implemented, going into how exactly it works, why it was designed this way and what are the trade-offs of this and the other proposed implementations."
+        links:
+          youtube: https://ftp.fau.de/fosdem/2025/ud2120/fosdem-2025-5329-the-inner-workings-of-go-generics.av1.webm
+          github: https://github.com/asankov/go-generics/
+          slides: https://asankov.dev/go-generics
+  - venue: "Go Meetup Vilnius"
+    date: "November 2023"
+    location: "Vilnius, Lithuania 🇱🇹"
+    sessions:
+      - name: "The Inner Workings of Go Generics"
+        summary: "Talk that goes deep into how generics work in the Go programming language. Starting from the history of the feature and why it took 12 years to be implemented, going into how exactly it works, why it was designed this way and what are the trade-offs of this and the other proposed implementations."
+        links:
+          youtube: https://www.youtube.com/live/oJ86gojyZiU?si=UEz-Cy3P4RWq3nSp&t=2110
+          github: https://github.com/asankov/go-generics/
+          slides: https://asankov.dev/go-generics
+  - venue: "VMware SaaS Meetup Community Summit"
+    date: "September 2023"
+    location: "Sofia, Bulgaria 🇧🇬"
+    sessions:
+      - name: "VMware SaaS Meetup Community Summit"
+        with: Martin Georgiev, Yavor Boychev, Alexander Dimitrov, Alexander Bonev
+        summary: "In this meetup, we recapped the previous VMware SaaS Tech Meetups, including the one about Cloud Native Security. We expanded on the topics, and had a free-form discussion with the audience about SaaS teams, organizations and security."
+  - venue: "MooseCon 2023 (Internal VMware event)"
+    date: "September 2023"
+    location: "Sofia, Bulgaria 🇧🇬"
+    sessions:
+      - name: "Cloud Native Security - From Development to Runtime"
+        with: Martin Georgiev
+        summary: "MooseCon is an internal VMware Security Conference. This sessions is a comprehensive overview of how to ensure the security of Cloud Native infrastructure at every stage of the container lifecycle. Covering the complete application lifecycle, starting with the Development stage, including topics such as selecting the rightbase image, managing package dependencies, and implementing secure coding practices. Finishing with the Distribute and Deploy phases of the lifecycle, and the Runtime aspects of Cloud Native Security."
+        links:
+          github: https://gitlab.com/asankov/cloud-native-security/
+          slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
+  - venue: "RADIO@EMEA 2023 (Internal VMware event)"
+    date: "September 2023"
+    location: "Sofia, Bulgaria 🇧🇬"
+    sessions:
+      - name: "Cloud Native Security - From Development to Runtime"
+        with: Martin Georgiev
+        summary: "RADIO@EMEA is the EMEA edition of RADIO - the biggest internal annual VMware Conference for Innovation. This sessions is a comprehensive overview of how to ensure the security of Cloud Native infrastructure at every stage of the container lifecycle. Covering the complete application lifecycle, starting with the Development stage, including topics such as selecting the rightbase image, managing package dependencies, and implementing secure coding practices. Finishing with the Distribute and Deploy phases of the lifecycle, and the Runtime aspects of Cloud Native Security."
+        links:
+          github: https://gitlab.com/asankov/cloud-native-security/
+          slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
+  - venue: Intro to Containers at Vocational High School for Audio, Video, and Telecommunications "A.S.Popov“
+    date: "June 2023"
+    location: "Sofia, Bulgaria 🇧🇬"
+    sessions:
+      - name: "Intro to Containers"
+        summary: "I was invited to a local high-school to give a lecture on Containers to the students from the Computer Science classes. The presentation was tailored to their programming experience (C# and .NET) and gave them basic overview of what containers are, how and why to use them."
+        links:
+          github: https://github.com/asankov/intro-to-containers/
+          slides: https://github.com/asankov/intro-to-containers/blob/main/intro-to-containers.pdf
+  - venue: "VMware Bulgaria Tech Meetups"
+    date: "May 2023"
+    location: "Sofia, Bulgaria 🇧🇬"
+    sessions:
+      - name: "Cloud Native Security - From Development to Runtime"
+        with: Martin Georgiev
+        summary: "Comprehensive overview of how to ensure the security of Cloud Native infrastructure at every stage of the container lifecycle. Covering the complete application lifecycle, starting with the Development stage, including topics such as selecting the rightbase image, managing package dependencies, and implementing secure coding practices. Finishing with the Distribute and Deploy phases of the lifecycle, and the Runtime aspects of Cloud Native Security."
+        links:
+          github: https://github.com/asankov/cloud-native-security
+          youtube: https://youtu.be/VMFFsfeNpKk
+          slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
+  - venue: "BSides Sofia 2023"
+    date: "March 2023"
+    location: "Sofia, Bulgaria 🇧🇬"
+    sessions:
+      - name: "How to automate Application Security the DevSecOps way"
+        type: Workshop
+        with: Svetlomir Balevski
+        summary:
+          "This workshop shows the audience what DevSecOps is, by doing a practical overview of the steps in a DevSecOps CI/CD Pipeline.
+          It goes through the different stages of the Pipeline, showing different steps in the process of building a secure application.
+          It shows things like SAST, SCA, Container image scanning, IAST, and DAST.
+          The workshop includes implementing a CI/CD pipeline that runs this checks for a certain application."
+        links:
+          github: https://github.com/asankov/how-to-automate-application-security-the-DevSecOps-way-workshop
+  - venue: "VMware Explore 2022"
+    date: "November 2022"
+    location: "Barcelona, Spain 🇪🇸"
+    sessions:
+      - name: "Day in The Life of a Cross Functional Security War Room"
+        type: Panel
+        summary:
+          "A War Room simulation where different security people are investigating a hacker attack against their company using VMware products.
+          My role was the SOC engineer who is using Carbon Black Container Security to investigate the attack on the company's Kubernetes workloads."
+  - venue: "KubeHuddle 2022"
+    date: "October 2022"
+    location: "Edinburgh, Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+    # TODO: support HTML
+    sessions:
+      - name: "Securing Kubernetes with Open Policy Agent"
+        summary:
+          'This talk explains why admission control in Kubernetes clusters is important, and what bad things can happen due to workload misconfiguration.
+          Then it guides the audience on how to implement proper admission control using two open-source projects - <a href="https://www.openpolicyagent.org/" target="_blank" class="text-blue-500">Open Policy Agent</a> and <a href="https://github.com/open-policy-agent/gatekeeper" target="_blank" class="text-blue-500">Gatekeeper</a>.'
+        links:
+          youtube: https://www.youtube.com/live/DcOYB4cUM9U?feature=share&t=12186
+          github: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
+          slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/kubehuddle-edinburgh-2022.pdf
+  - venue: OSCAL 2022
+    date: June 2022
+    location: Tirana, Albania 🇦🇱
+    sessions:
+      - name: Securing Kubernetes with Open Policy Agent
+        summary:
+          'This talk explains why admission control in Kubernetes clusters is important, and what bad things can happen due to workload misconfiguration.
+          Then it guides the audience on how to implement proper admission control using two open-source projects - <a href="https://www.openpolicyagent.org/" target="_blank" class="text-blue-500">Open Policy Agent</a> and <a href="https://github.com/open-policy-agent/gatekeeper" target="_blank" class="text-blue-500">Gatekeeper</a>.'
+        links:
+          github: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
+          slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/oscal-tirana-2022.pdf
+      - name: Go 101
+        type: Workshop
+        with: Boris Stoyanov
+        summary: |
+          Workshop for people that want to learn Go. No prior experience in the language is required, but experience with another programming language is.
+          The workshop is three-hours long, it starts with defining a functions, variables, etc. and ends with writing complex structs and attaching some sort of behavior to them.
+        links:
+          github: https://github.com/asankov/go-101-workshop
+  - venue: VMware RADIO 2022
+    date: May 2022
+    location: San Francisco, USA 🇺🇸
+    sessions:
+      - name: Building High-Performance Applications with Go
+        type: Panel
+        summary: |
+          VMware RADIO is the biggest internal annual VMware Conference for Innovation.<br>
+          I was part of a panel discussion about different ways to use the Go programming language to build high-performance web (and not only) applications.
+  - venue: BSides Sofia 2022
+    date: April 2022
+    location: Sofia, Bulgaria 🇧🇬
+    sessions:
+      - name: Securing Kubernetes with Open Policy Agent
+        summary: |
+          This talk explains why admission control in Kubernetes clusters is important, and what bad things can happen due to workload misconfiguration.
+          Then it guides the audience on how to implement proper admission control using two open-source projects - <a href="https://www.openpolicyagent.org/" target="_blank" class="text-blue-500">Open Policy Agent</a> and <a href="https://github.com/open-policy-agent/gatekeeper" target="_blank" class="text-blue-500">Gatekeeper</a>.
+        links:
+          youtube: https://www.youtube.com/watch?v=JewdgJASVxI
+          github: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
+          slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/bsides-sofia-2022.pdf
+  - venue: ISTA 2021
+    date: November 2021
+    location: Virtual 🌎
+    sessions:
+      - name: "Kubernetes Extensibility: Next Phases of Kubernetes"
+        summary: |
+          This talk showcases Kubernetes Extensibility constructs like Operators, CRDs, validating webhooks, etc. and shows how they can be leveraged to use Kubernetes as a development platform.
+        links:
+          youtube: https://www.youtube.com/watch?v=yim8NnYjODY
+          github: https://github.com/asankov/kubernetes-extensibility
+          slides: https://github.com/asankov/kubernetes-extensibility/blob/main/slides.pptx
+  - venue: HackConf 2021
+    date: October 2021
+    location: Virtual 🌎
+    sessions:
+      - name: Go 101
+        type: Workshop
+        with: Boris Stoyanov
+        summary: |
+          Workshop for people that want to learn Go. No prior experience in the language is required, but experience with another programming language is.
+          The workshop is three-hours long, it starts with defining a functions, variables, etc. and ends with writing complex structs and attaching some sort of behavior to them.
+        links:
+          github: https://github.com/asankov/go-101-workshop
+  - venue: DevConf.CZ 2020
+    date: January 2020
+    location: Brno, Czech Republic 🇨🇿
+    sessions:
+      - name: Building The Twelve-Factor App
+        summary: |
+          This talks explains <a href="https://12factor.net/" target="_blank" class="text-blue-500">The Twelve-Factor App methodology</a> and why it is still relevant today in the world of Kubernetes, containers and microservices.
+        links:
+          youtube: https://www.youtube.com/watch?v=xyeXx2qtfLI
+          slides: https://asankov.dev/twelve-factor-app/#/
+  - venue: OpenExpo Europe 2019
+    date: June 2019
+    location: Madrid, Spain 🇪🇸
+    sessions:
+      - name: Building The Twelve-Factor App
+        summary: |
+          This talks explains <a href="https://12factor.net/" target="_blank" class="text-blue-500">The Twelve-Factor App methodology</a> and why it is still relevant today in the world of Kubernetes, containers and microservices.
+        links:
+          slides: https://asankov.dev/twelve-factor-app/#/
+  - venue: HackConf 2019
+    date: October 2019
+    location: Sofia, Bulgaria 🇧🇬
+    sessions:
+      - name: Learn Python & Selenium the fast way
+        summary: |
+          A three-hour workshop that goes over the basics of Python in the first part and then shows how to use Selenium with Python in the second part.
+        with: Alexandar Todorov
+        links:
+          github: https://github.com/asankov/qa-automation-python-selenium-101
+  - venue: HackConf 2017
+    date: October 2017
+    location: Sofia, Bulgaria 🇧🇬
+    sessions:
+      - name: Learn Python & Selenium the fast way
+        summary: |
+          A six-hour workshop that goes over the basics of Python in the first part and then shows how to use Selenium with Python in the second part.
+        with: Alexandar Todorov
+        links:
+          github: https://github.com/asankov/qa-automation-python-selenium-101
+
+certifications:
+  - "Conference Speaker: FOSDEM 2025 - 'The Inner Workings of Go Generics'"
+  - "Conference Speaker: Go Meetup Vilnius 2024 - 'The Inner Workings of Go Generics'"
+  - "Conference Speaker: VMware SaaS Meetup Community Summit 2023"
+  - "Conference Speaker: MooseCon 2023 - 'Cloud Native Security - From Development to Runtime'"
+  - "Conference Speaker: RADIO@EMEA 2023 - 'Cloud Native Security - From Development to Runtime'"
+  - "Conference Speaker: VMware Bulgaria Tech Meetups 2023 - 'Cloud Native Security'"
+  - "Conference Speaker: BSides Sofia 2023 - 'How to automate Application Security the DevSecOps way' (Workshop)"
+  - "Conference Speaker: VMware Explore 2022 - 'Day in The Life of a Cross Functional Security War Room' (Panel)"
+  - "Conference Speaker: KubeHuddle 2022 - 'Securing Kubernetes with Open Policy Agent'"
+  - "Conference Speaker: OSCAL 2022 - 'Securing Kubernetes with Open Policy Agent' & 'Go 101' (Workshop)"
+  - "Conference Speaker: VMware RADIO 2022 - 'Building High-Performance Applications with Go' (Panel)"
+  - "Conference Speaker: BSides Sofia 2022 - 'Securing Kubernetes with Open Policy Agent'"
+  - "Conference Speaker: ISTA 2021 - 'Kubernetes Extensibility: Next Phases of Kubernetes'"
+  - "Conference Speaker: HackConf 2021 - 'Go 101' (Workshop)"
+  - "Conference Speaker: DevConf.CZ 2020 - 'Building The Twelve-Factor App'"
+  - "Conference Speaker: OpenExpo Europe 2019 - 'Building The Twelve-Factor App'"
+  - "Conference Speaker: HackConf 2019 - 'Learn Python & Selenium the fast way' (Workshop)"
+  - "Conference Speaker: HackConf 2017 - 'Learn Python & Selenium the fast way' (Workshop)"
+  - "VMware Talent Boost Academy Participant"
+  - "Core Team Member - Kiwi TCMS Open Source Project"
+  - "Contributor - 90DaysOfDevOps Second Edition (14 articles)"
