@@ -2,31 +2,33 @@
 const parseFrontMatter = (content: string) => {
   const frontMatterRegex = /^---\s*\n([\s\S]*?)\n---\s*\n([\s\S]*)$/;
   const match = content.match(frontMatterRegex);
-  
+
   if (!match) {
     return { data: {}, content };
   }
-  
+
   const [, yamlString, markdownContent] = match;
-  
+
   // Simple YAML parser for our specific use case
   const data: Record<string, string> = {};
-  yamlString.split('\n').forEach(line => {
-    const colonIndex = line.indexOf(':');
+  yamlString.split("\n").forEach((line) => {
+    const colonIndex = line.indexOf(":");
     if (colonIndex > 0) {
       const key = line.substring(0, colonIndex).trim();
       let value = line.substring(colonIndex + 1).trim();
-      
+
       // Remove quotes if present
-      if ((value.startsWith('"') && value.endsWith('"')) || 
-          (value.startsWith("'") && value.endsWith("'"))) {
+      if (
+        (value.startsWith('"') && value.endsWith('"')) ||
+        (value.startsWith("'") && value.endsWith("'"))
+      ) {
         value = value.slice(1, -1);
       }
-      
+
       data[key] = value;
     }
   });
-  
+
   return { data, content: markdownContent };
 };
 
@@ -54,10 +56,10 @@ let cachedArticleFiles: string[] | null = null;
 // Get the base path for fetching articles
 const getBasePath = (): string => {
   if (import.meta.env.PROD) {
-    const basePath = import.meta.env.VITE_BASE_PATH || 'ink-blog-scribe';
+    const basePath = import.meta.env.VITE_BASE_PATH;
     return `/${basePath}`;
   }
-  return '';
+  return "";
 };
 
 export const loadArticleFiles = async (): Promise<string[]> => {
@@ -68,9 +70,9 @@ export const loadArticleFiles = async (): Promise<string[]> => {
   const basePath = getBasePath();
   const response = await fetch(`${basePath}/articles/index.json`);
   if (!response.ok) {
-    throw new Error('Failed to load articles index');
+    throw new Error("Failed to load articles index");
   }
-  
+
   cachedArticleFiles = await response.json();
   return cachedArticleFiles;
 };
@@ -84,13 +86,16 @@ export const loadMarkdownFile = async (filename: string): Promise<string> => {
   return response.text();
 };
 
-export const parseMarkdownWithFrontMatter = (content: string, filename: string): BlogPost => {
+export const parseMarkdownWithFrontMatter = (
+  content: string,
+  filename: string,
+): BlogPost => {
   const { data, content: markdownContent } = parseFrontMatter(content);
   const frontMatter = data as unknown as BlogPostFrontMatter;
-  
+
   // Generate ID from filename
-  const id = filename.replace('.md', '');
-  
+  const id = filename.replace(".md", "");
+
   console.log({
     id,
     title: frontMatter.title,
@@ -99,7 +104,7 @@ export const parseMarkdownWithFrontMatter = (content: string, filename: string):
     date: frontMatter.date,
     slug: id,
     readTime: frontMatter.readTime,
-  })
+  });
   return {
     id,
     title: frontMatter.title,
@@ -122,25 +127,29 @@ export const loadAllBlogPosts = async (): Promise<BlogPost[]> => {
       articleFiles.map(async (filename) => {
         const content = await loadMarkdownFile(filename);
         return parseMarkdownWithFrontMatter(content, filename);
-      })
+      }),
     );
 
     // Sort posts by date (newest first)
-    cachedPosts = posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+    cachedPosts = posts.sort(
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+    );
     return cachedPosts;
   } catch (error) {
-    console.error('Failed to load blog posts:', error);
+    console.error("Failed to load blog posts:", error);
     return [];
   }
 };
 
-export const getBlogPostBySlug = async (slug: string): Promise<BlogPost | undefined> => {
+export const getBlogPostBySlug = async (
+  slug: string,
+): Promise<BlogPost | undefined> => {
   const posts = await loadAllBlogPosts();
-  return posts.find(post => post.slug === slug);
+  return posts.find((post) => post.slug === slug);
 };
 
 // Clear cache when needed (useful for development)
 export const clearCache = (): void => {
   cachedPosts = null;
   cachedArticleFiles = null;
-}; 
+};

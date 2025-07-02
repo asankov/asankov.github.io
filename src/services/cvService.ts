@@ -67,7 +67,7 @@ let cachedCVData: CVData | null = null;
 
 const getBasePath = (): string => {
   if (import.meta.env.PROD) {
-    const basePath = import.meta.env.VITE_BASE_PATH || "ink-blog-scribe";
+    const basePath = import.meta.env.VITE_BASE_PATH;
     return `/${basePath}`;
   }
   return "";
