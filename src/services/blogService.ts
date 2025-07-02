@@ -53,22 +53,12 @@ export interface BlogPostFrontMatter {
 let cachedPosts: BlogPost[] | null = null;
 let cachedArticleFiles: string[] | null = null;
 
-// Get the base path for fetching articles
-const getBasePath = (): string => {
-  if (import.meta.env.PROD) {
-    const basePath = import.meta.env.VITE_BASE_PATH;
-    return `/${basePath}`;
-  }
-  return "";
-};
-
 export const loadArticleFiles = async (): Promise<string[]> => {
   if (cachedArticleFiles) {
     return cachedArticleFiles;
   }
 
-  const basePath = getBasePath();
-  const response = await fetch(`${basePath}/articles/index.json`);
+  const response = await fetch(`/articles/index.json`);
   if (!response.ok) {
     throw new Error("Failed to load articles index");
   }

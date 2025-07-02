@@ -65,22 +65,13 @@ export interface CVData {
 
 let cachedCVData: CVData | null = null;
 
-const getBasePath = (): string => {
-  if (import.meta.env.PROD) {
-    const basePath = import.meta.env.VITE_BASE_PATH;
-    return `/${basePath}`;
-  }
-  return "";
-};
-
 export const loadCVData = async (): Promise<CVData> => {
   if (cachedCVData) {
     return cachedCVData;
   }
 
   try {
-    const basePath = getBasePath();
-    const response = await fetch(`${basePath}/cv-data.yaml`);
+    const response = await fetch(`/cv-data.yaml`);
     if (!response.ok) {
       throw new Error("Failed to load CV data");
     }
