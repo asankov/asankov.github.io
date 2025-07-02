@@ -68,8 +68,7 @@ export const loadArticleFiles = async (): Promise<string[]> => {
 };
 
 export const loadMarkdownFile = async (filename: string): Promise<string> => {
-  const basePath = getBasePath();
-  const response = await fetch(`${basePath}/articles/${filename}`);
+  const response = await fetch(`/articles/${filename}`);
   if (!response.ok) {
     throw new Error(`Failed to load article: ${filename}`);
   }
