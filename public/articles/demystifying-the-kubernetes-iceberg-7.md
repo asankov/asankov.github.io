@@ -20,12 +20,12 @@ In this article, we will continue with the second-to-last Tier 7 of the iceberg.
 
 You can find the others articles here:
 
-- [Part 1](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/)
-- [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/)
-- [Part 3](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-3/)
-- [Part 4](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/)
-- [Part 5](/blog/2022/06/12/demystifying-the-kubernetes-iceberg-part-5/)
-- [Part 6](/blog/2022/06/27/demystifying-the-kubernetes-iceberg-part-6/)
+- [Part 1](/post/demystifying-the-kubernetes-iceberg-1/)
+- [Part 2](/post/demystifying-the-kubernetes-iceberg-2/)
+- [Part 3](/post/demystifying-the-kubernetes-iceberg-3/)
+- [Part 4](/post/demystifying-the-kubernetes-iceberg-4/)
+- [Part 5](/post/demystifying-the-kubernetes-iceberg-5/)
+- [Part 6](/post/demystifying-the-kubernetes-iceberg-6/)
 
 I will publish one article each week until I complete the whole iceberg.
 
@@ -315,6 +315,6 @@ This is all for part seven.
 
 Just one more layer left until we crash the whole iceberg!
 
-The series finishes with [Part 8](/blog/2022/07/10/demystifying-the-kubernetes-iceberg-part-8/).
+The series finishes with [Part 8](/post/demystifying-the-kubernetes-iceberg-8/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).

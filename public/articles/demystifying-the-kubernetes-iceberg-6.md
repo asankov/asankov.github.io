@@ -22,11 +22,11 @@ This article is a week late, because last week I attended [OSCAL 2022](https://o
 
 You can find the others articles here:
 
-- [Part 1](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/)
-- [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/)
-- [Part 3](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-3/)
-- [Part 4](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/)
-- [Part 5](/blog/2022/06/12/demystifying-the-kubernetes-iceberg-part-5/)
+- [Part 1](/post/demystifying-the-kubernetes-iceberg-1/)
+- [Part 2](/post/demystifying-the-kubernetes-iceberg-2/)
+- [Part 3](/post/demystifying-the-kubernetes-iceberg-3/)
+- [Part 4](/post/demystifying-the-kubernetes-iceberg-4/)
+- [Part 5](/post/demystifying-the-kubernetes-iceberg-5/)
 
 I will publish one article each week until I complete the whole iceberg.
 
@@ -60,7 +60,7 @@ For more info and good practices about metrics, you can check [this great articl
 
 ### Terraform-managed infrastructure
 
-[Terraform](/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/#terraform) is an open-source IaC tool.
+[Terraform](/2022/05/29/demystifying-the-kubernetes-iceberg-3/#terraform) is an open-source IaC tool.
 It allows you to describe your infrastructure in text files and have it created for you by Terraform.
 Each change in your infrastructure goes through a change in the Terraform files.
 
@@ -92,7 +92,7 @@ The CNI implementation is responsible for managing the Kubernetes networking, e.
 
 The container runtime communicates with the CNI, so all the configuration is dynamic, changing when pods are created or deleted.
 
-Some CNIs give you additional features, such as [Network Policies](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#networkpolicy).
+Some CNIs give you additional features, such as [Network Policies](/post/demystifying-the-kubernetes-iceberg-4/#networkpolicy).
 
 There are different implementations of a CNI.
 These include (but are not limited to):
@@ -194,7 +194,7 @@ It works by deploying sidecar containers.
 
 It is developed and maintained by Google.
 
-All the logic for the Istio service mesh is configured via [CRDs](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/#crd) which you apply to your cluster.
+All the logic for the Istio service mesh is configured via [CRDs](/post/demystifying-the-kubernetes-iceberg-2/#crd) which you apply to your cluster.
 For example, these 2 CRDs configure A/B testing for a service that has 2 versions with a 60/40 distribution between the versions:
 
 ```yaml
@@ -283,7 +283,7 @@ Tools like [`kubeadm`](https://kubernetes.io/docs/setup/production-environment/t
 
 You can find more on how to achieve this in [this article](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/).
 
-Other tools like [`cert-manager`](/2022/06/12/demystifying-the-kubernetes-iceberg-part-5/#cert-manager) provide integration with CA authorities to automatically fetch and generate new certificates when the old ones expire.
+Other tools like [`cert-manager`](/2022/06/12/demystifying-the-kubernetes-iceberg-5/#cert-manager) provide integration with CA authorities to automatically fetch and generate new certificates when the old ones expire.
 
 ### node-local-dns
 
@@ -318,7 +318,7 @@ An [operator](https://kubernetes.io/docs/concepts/extend-kubernetes/operator/) i
 
 It aims to simplify automation and allow the extensibility of Kubernetes by providing an easy way to implement custom workflows.
 
-Usually, operators are tied to a [Custom Resource Definition](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/#crd).
+Usually, operators are tied to a [Custom Resource Definition](/post/demystifying-the-kubernetes-iceberg-2/#crd).
 Operators would listen for the create/update/deletion of a Custom Resource Definition and trigger a workflow when this event occurs.
 
 There are many use-cases for an operator, but provisioning is the most common.
@@ -363,6 +363,6 @@ We are almost at the bottom of the iceberg now.
 Just two more layers left until we complete it.
 Thank you for sharing this journey with me.
 
-The series continues with [Part 7](/blog/2022/07/04/demystifying-the-kubernetes-iceberg-part-7/).
+The series continues with [Part 7](/post/demystifying-the-kubernetes-iceberg-7/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).

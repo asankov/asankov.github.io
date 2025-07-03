@@ -22,13 +22,13 @@ It lists just three concepts.
 
 You can find the other articles here:
 
-- [Part 1](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/)
-- [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/)
-- [Part 3](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-3/)
-- [Part 4](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/)
-- [Part 5](/blog/2022/06/12/demystifying-the-kubernetes-iceberg-part-5/)
-- [Part 6](/blog/2022/06/27/demystifying-the-kubernetes-iceberg-part-6/)
-- [Part 7](/blog/2022/07/04/demystifying-the-kubernetes-iceberg-part-7/)
+- [Part 1](/post/demystifying-the-kubernetes-iceberg-1/)
+- [Part 2](/post/demystifying-the-kubernetes-iceberg-2/)
+- [Part 3](/post/demystifying-the-kubernetes-iceberg-3/)
+- [Part 4](/post/demystifying-the-kubernetes-iceberg-4/)
+- [Part 5](/post/demystifying-the-kubernetes-iceberg-5/)
+- [Part 6](/post/demystifying-the-kubernetes-iceberg-6/)
+- [Part 7](/post/demystifying-the-kubernetes-iceberg-7/)
 
 This is the last article of this series.
 

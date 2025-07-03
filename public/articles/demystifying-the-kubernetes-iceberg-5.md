@@ -18,14 +18,14 @@ This is the iceberg:
 ![The Kubernetes Iceberg meme](/images/kubernetes-iceberg.png)
 
 In this article, we will continue with Tier 5 of the iceberg.
-We started with the [first part of Tier 5 last week](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/), and today we will pick up where we left off.
+We started with the [first part of Tier 5 last week](/post/demystifying-the-kubernetes-iceberg-4/), and today we will pick up where we left off.
 
 You can find the others articles here:
 
-- [Part 1](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/)
-- [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/)
-- [Part 3](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-3/)
-- [Part 4](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/)
+- [Part 1](/post/demystifying-the-kubernetes-iceberg-1/)
+- [Part 2](/post/demystifying-the-kubernetes-iceberg-2/)
+- [Part 3](/post/demystifying-the-kubernetes-iceberg-3/)
+- [Part 4](/post/demystifying-the-kubernetes-iceberg-4/)
 
 I will publish one article each week until I complete the whole iceberg.
 
@@ -47,7 +47,7 @@ In these examples, we will assume that we are still talking about a single compa
 One way to do multitenancy in Kubernetes is via namespaces.
 
 Each team(tenant) gets its own namespace.
-Using [RBAC](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#rbac) we can assign permissions to the team members for only the namespace of their team.
+Using [RBAC](/post/demystifying-the-kubernetes-iceberg-4/#rbac) we can assign permissions to the team members for only the namespace of their team.
 
 **Pros:**
 
@@ -229,7 +229,7 @@ The process of upgrading a cluster is described in detail [here](https://kuberne
 
 IaC stands for Infrastructure as Code.
 This paradigm involves describing your infrastructure in text files (code) and having a tool that will provision/destroy resources based on the contents of this file and the changes to it.
-Such tools are [Terraform](/blog/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/#terraform), Pulumi and others.
+Such tools are [Terraform](/post/demystifying-the-kubernetes-iceberg-3/#terraform), Pulumi and others.
 
 Most IaC tools like Terraform can provision absolutely everything given that there is a provider for it.
 A provider is an implementation that provisions infrastructure based on your code.
@@ -293,13 +293,13 @@ They are saved in a short-term in-memory metrics server and exposed via the `met
 The second one is the **full metrics pipeline**, which is more sophisticated and gives you more metrics to work with.
 These are exposed by implementing either of the `custom.metrics.k8s.io` or `external.metrics.k8s.io` APIs.
 
-A CNCF-supported implementation of these APIs is [Prometheus](/blog/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/#prometheus).
+A CNCF-supported implementation of these APIs is [Prometheus](/post/demystifying-the-kubernetes-iceberg-3/#prometheus).
 
 ### Long-term Prometheus
 
-[Prometheus](/blog/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/#prometheus) is an open-source monitoring and alerting toolkit.
+[Prometheus](/post/demystifying-the-kubernetes-iceberg-3/#prometheus) is an open-source monitoring and alerting toolkit.
 
-It is used for metrics collection and aggregation.
+It is used for metrics collection and aggregation.post
 
 It can also be integrated with [local](https://prometheus.io/docs/prometheus/latest/storage/#local-storage) or [remote](https://prometheus.io/docs/prometheus/latest/storage/#remote-storage-integrations) file storage to achieve bigger data retention.
 
@@ -309,7 +309,7 @@ When using long-term storage, it is advisable to lower the number of time series
 
 ### Prometheus Query Caching
 
-Prometheus queries are written in [PromQL](/blog/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/#promql).
+Prometheus queries are written in [PromQL](/post/demystifying-the-kubernetes-iceberg-3/#promql).
 
 PromQL is quite powerful and can do many things like summing, averages, aggregation, etc.
 These are heavy operations that, if executed on a large dataset, can take a significant amount of CPU and memory to complete.
@@ -321,7 +321,7 @@ Of course, this is a trade-off because in a real-time system like Prometheus, th
 
 ### Ingress Monitoring
 
-The [ingress](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/#ingress) manages the external traffic coming into the cluster.
+The [ingress](/post/demystifying-the-kubernetes-iceberg-1/#ingress) manages the external traffic coming into the cluster.
 
 It is an integral part of our system - if the ingress is down or it cannot scale, our whole system will be blocked because all requests go through the ingress before getting into it.
 
@@ -377,7 +377,7 @@ This means that these workloads will share the underlying host resources.
 
 Kubernetes provides two constructs to control how these resources are shared - resource limits and resource requests.
 
-We discussed resource limits in [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2) of this series, but now I will go into more detail about the limits and requests and the difference between the two.
+We discussed resource limits in [Part 2](/post/demystifying-the-kubernetes-iceberg-2) of this series, but now I will go into more detail about the limits and requests and the difference between the two.
 
 The _requests_ show how many minimum resources the workload will need.
 The kubelet will use this information to find a proper Node to schedule the Pod (one with at least that many resources as the requests for the Pod).
@@ -422,6 +422,6 @@ In the last two article, we managed to demystify the biggest tier of the iceberg
 The next ones are smaller, but are getting more and more specific.
 I don't know about you, but I can't wait to dive into them.
 
-The series continues with [Part 6](/blog/2022/06/27/demystifying-the-kubernetes-iceberg-part-6/).
+The series continues with [Part 6](/post/demystifying-the-kubernetes-iceberg-6).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).

@@ -12,7 +12,7 @@ aliases:
 This is the second article of the "Demystifying the Kubernetes Iceberg" series.
 My goal for this series is to explain all concepts mentioned in the “Kubernetes Iceberg” meme by [Flant](https://flant.com/).
 
-You can find the first article [here](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/).
+You can find the first article [here](/post/demystifying-the-kubernetes-iceberg-1/).
 I will publish one article each week until I complete the whole iceberg.
 
 And this is the iceberg itself:
@@ -56,7 +56,7 @@ The `PersistentVolumeClaim` also specified the access mode to the storage (e.g. 
 ### StatefulSet
 
 A [`StatefulSet`](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) is a Kubernetes resource the represents a workload.
-It is similar to a [`Deployment`](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/#deployments) - it manages a set of Pods based on a Pod spec.
+It is similar to a [`Deployment`](/post/demystifying-the-kubernetes-iceberg-1/#deployments) - it manages a set of Pods based on a Pod spec.
 The specific thing about a `StatefulSet` is that manages stateful applications (hence the name).
 
 It is useful for situations where you want:
@@ -346,6 +346,6 @@ Specifying Resource limits in Kubernetes is optional but highly advisable. If yo
 This is all for part two.
 I hope you enjoyed it and learned something new.
 
-The series continues with [Part 3](/blog/2022/05/29/demystifying-the-kubernetes-iceberg-part-3/).
+The series continues with [Part 3](/post/demystifying-the-kubernetes-iceberg-3/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).

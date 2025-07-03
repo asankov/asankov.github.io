@@ -12,7 +12,7 @@ aliases:
 This is the third article of the "Demystifying the Kubernetes Iceberg" series.
 My goal for this series is to explain all concepts mentioned in the “Kubernetes Iceberg” meme by [Flant](https://flant.com/).
 
-You can find the first article [here](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/) and the second one - [here](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/).
+You can find the first article [here](/post/demystifying-the-kubernetes-iceberg-1/) and the second one - [here](/post/demystifying-the-kubernetes-iceberg-2/).
 I will publish one article each week until I complete the whole iceberg.
 
 And this is the iceberg itself:
@@ -31,7 +31,7 @@ Instead, you access a load balancer/gateway/reverse proxy that decides which ins
 
 In Kubernetes, the same concept can be applied to Pods and Services.
 
-In [Tier 1](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/), I explained how [Services](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/#service) provide stable IP and networking to Pods that are ephemeral and can be replaced with other Pods (with different IPs) at any given time.
+In [Tier 1](/post/demystifying-the-kubernetes-iceberg-1/), I explained how [Services](/post/demystifying-the-kubernetes-iceberg-1/#service) provide stable IP and networking to Pods that are ephemeral and can be replaced with other Pods (with different IPs) at any given time.
 
 Services also provide Load Balancing between these Pods.
 A Service that represents 3 Pods will route traffic to these pods on a round-robin basis.
@@ -287,7 +287,7 @@ The `BestEffort` QoS class is assigned to Pods whose containers don't have any m
 
 ### HPA/VPA based on custom metrics
 
-In [the last article](http://localhost:1313/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/#hpa), I explained what HPA is and how to do it with Kubernetes-defined metrics.
+In [the last article](/post/demystifying-the-kubernetes-iceberg-2/#hpa), I explained what HPA is and how to do it with Kubernetes-defined metrics.
 
 Another thing you can do is define your custom metrics, which can be used by the HPA to determine when you scale out/in.
 
@@ -310,6 +310,6 @@ With this article we already go into a deep territory and into concepts which yo
 I hope these articles are useful to you and you are learning something new.
 I definitely am while working on them!
 
-The series continues with [Part 4](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/).
+The series continues with [Part 4](/post/demystifying-the-kubernetes-iceberg-4/).
 
 If you don’t want to miss it, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).

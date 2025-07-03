@@ -24,9 +24,9 @@ The first part (this article) will focus on all the security related concepts in
 
 You can find the others article:
 
-- [Part 1](/blog/2022/05/15/demystifying-the-kubernetes-iceberg-part-1/)
-- [Part 2](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-2/)
-- [Part 3](/blog/2022/05/22/demystifying-the-kubernetes-iceberg-part-3/)
+- [Part 1](/post/demystifying-the-kubernetes-iceberg-1/)
+- [Part 2](/post/demystifying-the-kubernetes-iceberg-2/)
+- [Part 3](/post/demystifying-the-kubernetes-iceberg-3/)
 
 I will publish one article each week until I complete the whole iceberg.
 
@@ -421,7 +421,7 @@ spec:
     labels: ["gatekeeper"]
 ```
 
-If you want to learn more about using Gatekeeper and OPA check out my article about [Securing Kubernetes with Open Policy Agent](https://asankov.dev/blog/2022/04/21/securing-kubernetes-with-open-policy-agent/).
+If you want to learn more about using Gatekeeper and OPA check out my article about [Securing Kubernetes with Open Policy Agent](/post/securing-kubernetes-with-open-policy-agent/).
 
 ### OpenID Connect
 
@@ -448,13 +448,13 @@ Every concept in this article can be part of an "enterprise-level security."
 
 An enterprise using Kubernetes and wanting to secure it in an "enterprise" way needs to use at least half of the things described in this article.
 
-At a minimum, they need to use [RBAC](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4#RBAC) to ensure that everyone has access only to the resource they need to have.
-Ideally, that will be integrated with their AD provider using an [OpenID Connect](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#openid-connect) provider like [Dex](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#dex).
-Then, they need to enable [audit logging](/blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#audit-logging) so that if someone manages to escalate privileges or if RBAC is configured wrong, there is a reliable trace for that.
+At a minimum, they need to use [RBAC](/post/demystifying-the-kubernetes-iceberg-4#RBAC) to ensure that everyone has access only to the resource they need to have.
+Ideally, that will be integrated with their AD provider using an [OpenID Connect](/post/demystifying-the-kubernetes-iceberg-4/#openid-connect) provider like [Dex](/post/demystifying-the-kubernetes-iceberg-4/#dex).
+Then, they need to enable [audit logging](/post/demystifying-the-kubernetes-iceberg-4/#audit-logging) so that if someone manages to escalate privileges or if RBAC is configured wrong, there is a reliable trace for that.
 
-Another good additional layer of security would be to limit what processes the Pods can run via tools like [AppArmor](blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#apparmor) and [seccomp](blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#seccomp) and what network connections they can do via [PodSecurityPolicies](blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#podsecuritypolicy).
+Another good additional layer of security would be to limit what processes the Pods can run via tools like [AppArmor](/post/demystifying-the-kubernetes-iceberg-4/#apparmor) and [seccomp](/post/demystifying-the-kubernetes-iceberg-4/#seccomp) and what network connections they can do via [PodSecurityPolicies](/post/demystifying-the-kubernetes-iceberg-4/#podsecuritypolicy).
 
-Last but not least, they could implement Dynamic admission control via mutating and admission webhooks, using tools like [OPA](blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#open-policy-agent) and [Gatekeeper](blog/2022/06/05/demystifying-the-kubernetes-iceberg-part-4/#gatekeeper).
+Last but not least, they could implement Dynamic admission control via mutating and admission webhooks, using tools like [OPA](blog/2022/06/05/demystifying-the-kubernetes-iceberg-4/#open-policy-agent) and [Gatekeeper](blog/2022/06/05/demystifying-the-kubernetes-iceberg-4/#gatekeeper).
 
 ## Summary
 
@@ -464,6 +464,6 @@ In this article, we managed to go over many of the main Kubernetes security conc
 Security is a really important topic in today's world and I believe that every Kubernetes practitioner should know at least a little bit of security.
 I hope that this article can be a good starting point of someone getting into Kubernetes security.
 
-The series continues with [Part 5](/blog/2022/06/02/demystifying-the-kubernetes-iceberg-part-5/).
+The series continues with [Part 5](/post/demystifying-the-kubernetes-iceberg-5/).
 
 If you don’t want to miss an article, you can follow me on [Twitter](https://twitter.com/a_sankov) or [LinkedIn](https://www.linkedin.com/in/asankov/).
