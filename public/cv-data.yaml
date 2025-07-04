@@ -17,12 +17,11 @@ experience:
   - title: "Staff Software Engineer"
     company: "Cast AI"
     location: "Sofia, Bulgaria (Remote)"
-    period: "March 2024 - Present"
     positions:
       - title: "Staff Software Engineer"
-        period: "March 2025 - Present"
+        period: "Mar 2025 - Present"
       - title: "Senior Software Engineer"
-        period: "March 2024 - March 2025"
+        period: "Mar 2024 - Mar 2025"
     responsibilities:
       - "Working on the Security product, part of the Cast Automation Platform"
       - "Developing Attack Paths: graph-based detection of attack vectors exposed and waiting to be exploited"
@@ -46,12 +45,11 @@ experience:
   - title: "Senior Member of Technical Staff"
     company: "VMware Carbon Black"
     location: "Sofia, Bulgaria (remote team)"
-    period: "January 2022 - February 2024"
     positions:
       - title: "Senior Member of Technical Staff"
-        period: "January 2022 - February 2024"
+        period: "Jan 2022 - Feb 2024"
       - title: "Member of Technical Staff"
-        period: "June 2020 - January 2022"
+        period: "Jun 2020 - Jan 2022"
     responsibilities:
       - "Worked on the Carbon Black Cloud Container Security product providing end-to-end Kubernetes Security"
       - "Developed Hardening: detecting misconfigurations in Kubernetes resources and enforcing policies"
@@ -77,7 +75,7 @@ experience:
     location: "Sofia, Bulgaria (remote team)"
     positions:
       - title: "Software Engineer"
-        period: "August 2019 - June 2020"
+        period: "Aug 2019 - Jun 2020"
     responsibilities:
       - "Worked on products part of the Docker Enterprise (Docker EE) stack"
       - "Developed SaaS multi-cluster management product (scrapped after Mirantis acquisition)"
@@ -96,12 +94,12 @@ experience:
   - title: "Software Engineer"
     company: "Paysafe"
     location: "Sofia, Bulgaria"
-    period: "May 2018 - August 2019"
+    period: "May 2018 - Aug 2019"
     positions:
       - title: "Software Engineer"
-        period: "April 2019 - August 2019"
+        period: "Apr 2019 - Aug 2019"
       - title: "Junior Software Engineer"
-        period: "May 2018 - April 2019"
+        period: "May 2018 - Apr 2019"
     responsibilities:
       - "Worked on integrating crypto-currency trading into company's digital wallets - Skrill and Neteller"
       - "Did full-stack work - both back-end and front-end"
@@ -119,7 +117,7 @@ experience:
     location: "Sofia, Bulgaria"
     positions:
       - title: "Software Engineering Intern"
-        period: "June 2017 - December 2017"
+        period: "Jun 2017 - Dec 2017"
     responsibilities:
       - "Worked on the provisioning framework of SAP Cloud Platform"
       - "Started with a month of learning and building own project"
@@ -134,10 +132,10 @@ experience:
 openSourceContributions:
   - company: "Kiwi TCMS (Open Source)"
     location: "Sofia, Bulgaria (working remotely)"
-    period: "November 2017 - June 2022"
+    period: "Nov 2017 - Jun 2022"
     positions:
       - title: "Core Team Member"
-        period: "November 2017 - June 2022"
+        period: "Nov 2017 - Jun 2022"
     responsibilities:
       - "Wrote clean and maintainable code, did code reviews, onboarded new team members"
       - "Made and executed a plan to refactor ~2000 pylint warnings"
@@ -154,7 +152,7 @@ openSourceContributions:
     location: "GitHub"
     positions:
       - title: "Contributor"
-        period: "January 2023"
+        period: "Jan 2023"
     responsibilities:
       - "Contributed 14 articles for the 90DaysOfDevOps initiative"
       - "Days 14-20: Continuous Build, Integration, Testing"
@@ -165,7 +163,7 @@ openSourceContributions:
 
 talks:
   - venue: "FOSDEM 2025"
-    date: "February 2025"
+    date: "Feb 2025"
     location: "Brussels, Belgium 🇧🇪"
     sessions:
       - name: "The Inner Workings of Go Generics"
@@ -175,7 +173,7 @@ talks:
           github: https://github.com/asankov/go-generics/
           slides: https://asankov.dev/go-generics
   - venue: "Go Meetup Vilnius"
-    date: "November 2023"
+    date: "Nov 2023"
     location: "Vilnius, Lithuania 🇱🇹"
     sessions:
       - name: "The Inner Workings of Go Generics"
@@ -185,14 +183,14 @@ talks:
           github: https://github.com/asankov/go-generics/
           slides: https://asankov.dev/go-generics
   - venue: "VMware SaaS Meetup Community Summit"
-    date: "September 2023"
+    date: "Sep 2023"
     location: "Sofia, Bulgaria 🇧🇬"
     sessions:
       - name: "VMware SaaS Meetup Community Summit"
         with: Martin Georgiev, Yavor Boychev, Alexander Dimitrov, Alexander Bonev
         summary: "In this meetup, we recapped the previous VMware SaaS Tech Meetups, including the one about Cloud Native Security. We expanded on the topics, and had a free-form discussion with the audience about SaaS teams, organizations and security."
   - venue: "MooseCon 2023 (Internal VMware event)"
-    date: "September 2023"
+    date: "Sep 2023"
     location: "Sofia, Bulgaria 🇧🇬"
     sessions:
       - name: "Cloud Native Security - From Development to Runtime"
@@ -202,7 +200,7 @@ talks:
           github: https://gitlab.com/asankov/cloud-native-security/
           slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
   - venue: "RADIO@EMEA 2023 (Internal VMware event)"
-    date: "September 2023"
+    date: "Sep 2023"
     location: "Sofia, Bulgaria 🇧🇬"
     sessions:
       - name: "Cloud Native Security - From Development to Runtime"
@@ -212,7 +210,7 @@ talks:
           github: https://gitlab.com/asankov/cloud-native-security/
           slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
   - venue: Intro to Containers at Vocational High School for Audio, Video, and Telecommunications "A.S.Popov“
-    date: "June 2023"
+    date: "Jun 2023"
     location: "Sofia, Bulgaria 🇧🇬"
     sessions:
       - name: "Intro to Containers"
@@ -232,7 +230,7 @@ talks:
           youtube: https://youtu.be/VMFFsfeNpKk
           slides: https://gitlab.com/asankov/cloud-native-security/-/blob/main/cloud-native-security.pdf
   - venue: "BSides Sofia 2023"
-    date: "March 2023"
+    date: "Mar 2023"
     location: "Sofia, Bulgaria 🇧🇬"
     sessions:
       - name: "How to automate Application Security the DevSecOps way"
@@ -246,7 +244,7 @@ talks:
         links:
           github: https://github.com/asankov/how-to-automate-application-security-the-DevSecOps-way-workshop
   - venue: "VMware Explore 2022"
-    date: "November 2022"
+    date: "Nov 2022"
     location: "Barcelona, Spain 🇪🇸"
     sessions:
       - name: "Day in The Life of a Cross Functional Security War Room"
@@ -255,7 +253,7 @@ talks:
           "A War Room simulation where different security people are investigating a hacker attack against their company using VMware products.
           My role was the SOC engineer who is using Carbon Black Container Security to investigate the attack on the company's Kubernetes workloads."
   - venue: "KubeHuddle 2022"
-    date: "October 2022"
+    date: "Oct 2022"
     location: "Edinburgh, Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿"
     # TODO: support HTML
     sessions:
@@ -268,7 +266,7 @@ talks:
           github: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
           slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/kubehuddle-edinburgh-2022.pdf
   - venue: OSCAL 2022
-    date: June 2022
+    date: Jun 2022
     location: Tirana, Albania 🇦🇱
     sessions:
       - name: Securing Kubernetes with Open Policy Agent
@@ -296,7 +294,7 @@ talks:
           VMware RADIO is the biggest internal annual VMware Conference for Innovation.<br>
           I was part of a panel discussion about different ways to use the Go programming language to build high-performance web (and not only) applications.
   - venue: BSides Sofia 2022
-    date: April 2022
+    date: Apr 2022
     location: Sofia, Bulgaria 🇧🇬
     sessions:
       - name: Securing Kubernetes with Open Policy Agent
@@ -308,7 +306,7 @@ talks:
           github: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/
           slides: https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/slides/bsides-sofia-2022.pdf
   - venue: ISTA 2021
-    date: November 2021
+    date: Nov 2021
     location: Virtual 🌎
     sessions:
       - name: "Kubernetes Extensibility: Next Phases of Kubernetes"
@@ -319,7 +317,7 @@ talks:
           github: https://github.com/asankov/kubernetes-extensibility
           slides: https://github.com/asankov/kubernetes-extensibility/blob/main/slides.pptx
   - venue: HackConf 2021
-    date: October 2021
+    date: Oct 2021
     location: Virtual 🌎
     sessions:
       - name: Go 101
@@ -331,7 +329,7 @@ talks:
         links:
           github: https://github.com/asankov/go-101-workshop
   - venue: DevConf.CZ 2020
-    date: January 2020
+    date: Jan 2020
     location: Brno, Czech Republic 🇨🇿
     sessions:
       - name: Building The Twelve-Factor App
@@ -341,7 +339,7 @@ talks:
           youtube: https://www.youtube.com/watch?v=xyeXx2qtfLI
           slides: https://asankov.dev/twelve-factor-app/#/
   - venue: OpenExpo Europe 2019
-    date: June 2019
+    date: Jun 2019
     location: Madrid, Spain 🇪🇸
     sessions:
       - name: Building The Twelve-Factor App
@@ -350,7 +348,7 @@ talks:
         links:
           slides: https://asankov.dev/twelve-factor-app/#/
   - venue: HackConf 2019
-    date: October 2019
+    date: Oct 2019
     location: Sofia, Bulgaria 🇧🇬
     sessions:
       - name: Learn Python & Selenium the fast way
@@ -360,7 +358,7 @@ talks:
         links:
           github: https://github.com/asankov/qa-automation-python-selenium-101
   - venue: HackConf 2017
-    date: October 2017
+    date: Oct 2017
     location: Sofia, Bulgaria 🇧🇬
     sessions:
       - name: Learn Python & Selenium the fast way
