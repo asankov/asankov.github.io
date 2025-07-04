@@ -1,7 +1,7 @@
 ---
 title: "Fun Experiment with LLMs and Tools"
 linkTitle: "Fun Experiment with LLMs and Tools"
-date: 2025-05-07
+date: 2025-07-05
 description: Some fun I had with LLMs and tool usage.
 categories:
   - AI
