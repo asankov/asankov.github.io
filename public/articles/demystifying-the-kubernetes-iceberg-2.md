@@ -100,7 +100,7 @@ kind: Pod
 metadata:
   name: busybox-sleep
   labels:
-    environment: { { .Values.environment } }
+    environment: {{ .Values.environment }}
 spec:
   containers:
     - name: busybox
