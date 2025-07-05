@@ -394,7 +394,7 @@ My personal takeways are:
 
 - the LLM is more inclined to use tools that I expected it to be.
 It used a tool for a very simple action that is more than capable of doing itself.
-- even though it used the tool every time, it did not respect the result every time, and sometime it jsut defaulted to what IT though the result should be
+- even though it used the tool every time, it did not respect the result every time, and sometime it just defaulted to what IT though the result should be
 - instruction following ability of this model in particular is quite good, and with some very simple (and cheap in terms of token) prompt engineering I got it to consistently respect the tool results
 
 I'd like to continue this experiment with multiple models and see how inclined they are to using tools and following instructions.
