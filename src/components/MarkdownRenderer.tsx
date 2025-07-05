@@ -2,6 +2,7 @@ import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import { Light as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import CodeBlock from "./CodeBlock";
 
 // Import only commonly used languages to reduce bundle size
 import javascript from "react-syntax-highlighter/dist/esm/languages/hljs/javascript";
@@ -74,21 +75,9 @@ const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
               : "text";
 
             return (
-              <div className="mb-6">
-                <SyntaxHighlighter
-                  style={atomOneDark}
-                  language={language}
-                  PreTag="div"
-                  customStyle={{
-                    margin: 0,
-                    borderRadius: "0.5rem",
-                    fontSize: "0.875rem",
-                    padding: "1.5rem",
-                  }}
-                >
-                  {String(children).replace(/\n$/, "")}
-                </SyntaxHighlighter>
-              </div>
+              <CodeBlock language={language} className={className}>
+                {String(children).replace(/\n$/, "")}
+              </CodeBlock>
             );
           },
           blockquote: ({ children }) => (
