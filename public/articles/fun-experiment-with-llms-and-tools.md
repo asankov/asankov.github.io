@@ -29,6 +29,8 @@ I am using the Claude models, so the only dependencies I need are the Anthropic 
 uv add anthropic python-dotenv
 ```
 
+The full code and instructions how to run it yourself can be found on my [Github](https://github.com/asankov/fun-with-llms).
+
 ## 1. Initial run - no tools
 
 In my initial run, I let the model perform the calculation by itself, without using any tools.
@@ -401,3 +403,5 @@ I'd like to continue this experiment with multiple models and see how inclined t
 If I do that, I can document my findings in a follow-up blog post.
 
 If you don't want to miss it, you can follow me on [LinkedIn](https://www.linkedin.com/in/asankov/).
+
+The full code and instructions how to run it yourself can be found on my [Github](https://github.com/asankov/fun-with-llms).
