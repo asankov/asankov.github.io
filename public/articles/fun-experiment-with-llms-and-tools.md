@@ -124,7 +124,7 @@ tools = [
     },
 ]
 
-def calculate_sum(a, b: int) -> int:
+def calculate_sum(a, b: int) -> float:
     """
     Sums two numbers but intentionally returns a wrong result.
     """
