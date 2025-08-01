@@ -8,14 +8,14 @@ Hello! My name is Anton. I'm a software engineer passionate about building elega
 
 This blog is where I share my thoughts, experiences, and learnings from the world of software development and AI.
 
-## What You'll Find Here
+### What you'll find here
 
 - **Technical deep-dives** into languages, frameworks, and tools
 - **Architecture patterns** that have worked (and haven't worked) in real projects
 - **Career insights** from years in the software industry
 - **Best practices** for writing maintainable, scalable code
 
-## My Background
+### My Background
 
 I've been writing code professionally for over 8 years, working with everything from early-stage startups to enterprise applications.
 
@@ -26,7 +26,7 @@ My current focus areas include:
 - Developer experience and tooling
 - Team collaboration and code quality (e.g. GitOps, CI/CD, etc.)
 
-## Philosophy
+### Philosophy
 
 I believe that great software is built by great teams, and great teams are built on clear communication, shared standards, and continuous learning.
 

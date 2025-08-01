@@ -247,7 +247,7 @@ const CV = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <FaYoutube className="w-10 h-10 hover:text-gray-600 text-black cursor-pointer" />
+                            <FaYoutube className="w-8 h-8 hover:text-gray-600 text-black cursor-pointer" />
                           </a>
                         )}
                         {session.links.github && (
@@ -256,7 +256,7 @@ const CV = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <FaGithub className="w-10 h-10 hover:text-gray-600 text-black cursor-pointer" />
+                            <FaGithub className="w-8 h-8 hover:text-gray-600 text-black cursor-pointer" />
                           </a>
                         )}
                         {session.links.slides && (
@@ -265,7 +265,7 @@ const CV = () => {
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <FaSlideshare className="w-10 h-10 hover:text-gray-600 text-black cursor-pointer" />
+                            <FaSlideshare className="w-8 h-8 hover:text-gray-600 text-black cursor-pointer" />
                           </a>
                         )}
                       </>
