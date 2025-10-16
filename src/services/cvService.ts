@@ -21,8 +21,9 @@ export interface CVData {
     positions: Array<{
       title: string;
       period: string;
+      responsibilities?: string[];
     }>;
-    responsibilities: string[];
+    responsibilities?: string[];
   }>;
   // TODO(asankov): unify types
   openSourceContributions: Array<{
@@ -32,8 +33,9 @@ export interface CVData {
     positions: Array<{
       title: string;
       period: string;
+      responsibilities?: string[];
     }>;
-    responsibilities: string[];
+    responsibilities?: string[];
   }>;
   skills: {
     frontend: string[];

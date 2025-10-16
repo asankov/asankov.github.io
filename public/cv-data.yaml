@@ -14,24 +14,26 @@ contact:
 summary: "Staff Software Engineer with extensive experience in Cloud Native Security, Kubernetes, and Go development. Strong background in building scalable microservices, container security products, and developer tooling. Active open source contributor and international conference speaker with expertise in DevSecOps and software architecture."
 
 experience:
-  - title: "Staff Software Engineer"
+  - title: "Staff AI Engineer"
     company: "Cast AI"
     location: "Sofia, Bulgaria (Remote)"
     positions:
-      - title: "Staff Software Engineer"
+      - title: "Staff AI Engineer"
         period: "Mar 2025 - Present"
+        responsibilities:
+          - "Leading the development of Application Performance Automation - APA - next-gen AI automation platform by Cast AI"
+          - "Building AI agents that automate different flows and tasks of your day-to-day work with Kubernetes"
+          - "Involved in planning, design and implementation of new features and agents"
+          - "Communication with different internal (UI/UX, PM, SE, Sales) and external (customers) stakeholders"
+          - "Writing clean and maintainable code, doing code reviews, interview and onboarding new team members"
       - title: "Senior Software Engineer"
         period: "Mar 2024 - Mar 2025"
-    responsibilities:
-      - "Working on the Security product, part of the Cast Automation Platform"
-      - "Developing Attack Paths: graph-based detection of attack vectors exposed and waiting to be exploited"
-      - "Building Image Scanning: scanning container images, providing information about vulnerable container images and possible remediation"
-      - "Implementing Compliance: rule-based checks for violation of industry-defined compliance standards and best practices"
-      - "Writing clean and maintainable code, doing code reviews, onboarding new team members"
-      - "Communicating with internal and external stakeholders (PM, UX, customers)"
-      - "Writing technical documents (Engineering Analysis, write-ups, RFCs, customer-facing product documentation)"
-      - "Presenting the work of our team in company-wide meetings and demos"
-      - "Participating in the hiring process and leading the Dev Wars Guild"
+        responsibilities:
+          - "Working on the Security product, part of the Cast Automation Platform"
+          - "Building Image Scanning: scanning container images, providing information about vulnerable container images and possible remediation"
+          - "Implementing Compliance: rule-based checks for violation of industry-defined compliance standards and best practices"
+          - "Writing clean and maintainable code, doing code reviews, onboarding new team members"
+          - "Communication with different internal (UI/UX, PM, SE, Sales) and external (customer) shareholders"
     skills:
       - Go
       - gRPC
