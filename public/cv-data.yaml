@@ -183,7 +183,7 @@ talks:
           github: https://github.com/asankov/go-generics/
           slides: https://asankov.dev/go-generics
   - venue: "Go Meetup Vilnius"
-    date: "Nov 2023"
+    date: "Dec 2024"
     location: "Vilnius, Lithuania 🇱🇹"
     sessions:
       - name: "The Inner Workings of Go Generics"
