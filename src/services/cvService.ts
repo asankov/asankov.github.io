@@ -17,11 +17,12 @@ export interface CVData {
   experience: Array<{
     company: string;
     location: string;
-    skills: Array<string>;
+    skills?: Array<string>;
     positions: Array<{
       title: string;
       period: string;
       responsibilities?: string[];
+      skills?: Array<string>;
     }>;
     responsibilities?: string[];
   }>;
@@ -29,11 +30,12 @@ export interface CVData {
   openSourceContributions: Array<{
     company: string;
     location: string;
-    skills: Array<string>;
+    skills?: Array<string>;
     positions: Array<{
       title: string;
       period: string;
       responsibilities?: string[];
+      skills?: Array<string>;
     }>;
     responsibilities?: string[];
   }>;

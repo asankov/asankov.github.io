@@ -132,6 +132,19 @@ const CV = () => {
                           ))}
                         </ul>
                       )}
+                      {position.skills && position.skills.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-2 ml-2">
+                          <span className="font-bold">Tech: </span>
+                          {position.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 {job.responsibilities && job.responsibilities.length > 0 && (
@@ -141,10 +154,10 @@ const CV = () => {
                     ))}
                   </ul>
                 )}
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="font-bold">Tech: </span>
-                  {job.skills &&
-                    job.skills.map((skill) => (
+                {job.skills && job.skills.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="font-bold">Tech: </span>
+                    {job.skills.map((skill) => (
                       <span
                         key={skill}
                         className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
@@ -152,7 +165,8 @@ const CV = () => {
                         {skill}
                       </span>
                     ))}
-                </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -190,6 +204,19 @@ const CV = () => {
                           ))}
                         </ul>
                       )}
+                      {position.skills && position.skills.length > 0 && (
+                        <div className="flex flex-wrap gap-2 mt-2 ml-2">
+                          <span className="font-bold">Tech: </span>
+                          {position.skills.map((skill) => (
+                            <span
+                              key={skill}
+                              className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      )}
                     </div>
                   ))}
                 {os.responsibilities && os.responsibilities.length > 0 && (
@@ -199,10 +226,10 @@ const CV = () => {
                     ))}
                   </ul>
                 )}
-                <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="font-bold">Tech: </span>
-                  {os.skills &&
-                    os.skills.map((skill) => (
+                {os.skills && os.skills.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="font-bold">Tech: </span>
+                    {os.skills.map((skill) => (
                       <span
                         key={skill}
                         className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium"
@@ -210,7 +237,8 @@ const CV = () => {
                         {skill}
                       </span>
                     ))}
-                </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
