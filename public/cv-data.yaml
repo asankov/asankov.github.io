@@ -26,6 +26,16 @@ experience:
           - "Involved in planning, design and implementation of new features and agents"
           - "Communication with different internal (UI/UX, PM, SE, Sales) and external (customers) stakeholders"
           - "Writing clean and maintainable code, doing code reviews, interview and onboarding new team members"
+        skills:
+          - Python
+          - LLMs (OpenAI, Anthropic, Gemini)
+          - RAG
+          - Kubernetes
+          - Pydantic
+          - FastAPI
+          - Phoenix
+          - gRPC
+          - Kubernetes
       - title: "Senior Software Engineer"
         period: "Mar 2024 - Mar 2025"
         responsibilities:
@@ -34,15 +44,13 @@ experience:
           - "Implementing Compliance: rule-based checks for violation of industry-defined compliance standards and best practices"
           - "Writing clean and maintainable code, doing code reviews, onboarding new team members"
           - "Communication with different internal (UI/UX, PM, SE, Sales) and external (customer) shareholders"
-    skills:
-      - Go
-      - gRPC
-      - eBPF
-      - Kubernetes
-      - Helm
-      - PostgreSQL
-      - Terraform
-      - GCP PubSub
+        skills:
+          - Go
+          - gRPC
+          - Kubernetes
+          - Helm
+          - PostgreSQL
+          - Terraform
 
   - title: "Senior Member of Technical Staff"
     company: "VMware Carbon Black"
