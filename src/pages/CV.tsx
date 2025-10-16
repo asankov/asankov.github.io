@@ -53,7 +53,7 @@ const CV = () => {
         </div>
 
         {/* Contact Information */}
-        <section className="mb-12">
+        <section className="mb-12" id="contact-information">
           <h2 className="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">
             Contact Information
           </h2>
@@ -90,7 +90,7 @@ const CV = () => {
         </section>
 
         {/* Summary */}
-        <section className="mb-12">
+        <section className="mb-12" id="professional-summary">
           <h2 className="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">
             Professional Summary
           </h2>
@@ -98,7 +98,7 @@ const CV = () => {
         </section>
 
         {/* Experience */}
-        <section className="mb-12">
+        <section className="mb-12" id="work-experience">
           <h2 className="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">
             Work Experience
           </h2>
@@ -172,7 +172,7 @@ const CV = () => {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-12" id="open-source-contributions">
           <h2 className="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">
             Open Source Contributions
           </h2>
@@ -244,7 +244,7 @@ const CV = () => {
           </div>
         </section>
 
-        <section className="mb-12">
+        <section className="mb-12" id="public-talks">
           <h2 className="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">
             Public Talks
           </h2>
