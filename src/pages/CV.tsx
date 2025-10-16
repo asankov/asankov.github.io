@@ -116,20 +116,31 @@ const CV = () => {
                   </span>
                 </div>
                 {job.positions &&
-                  job.positions.map((position, index) => (
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 ml-2">
-                      <span className="font-bold">{position.title}</span>
-                      <span className="text-gray-600 font-medium flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {position.period}
-                      </span>
+                  job.positions.map((position, posIndex) => (
+                    <div key={posIndex} className="ml-2 mb-4">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <span className="font-bold">{position.title}</span>
+                        <span className="text-gray-600 font-medium flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          {position.period}
+                        </span>
+                      </div>
+                      {position.responsibilities && position.responsibilities.length > 0 && (
+                        <ul className="list-disc list-inside text-gray-800 space-y-2 ml-2">
+                          {position.responsibilities.map((responsibility, idx) => (
+                            <li key={idx}>{responsibility}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   ))}
-                <ul className="list-disc list-inside text-gray-800 space-y-2 ml-2">
-                  {job.responsibilities.map((responsibility, idx) => (
-                    <li key={idx}>{responsibility}</li>
-                  ))}
-                </ul>
+                {job.responsibilities && job.responsibilities.length > 0 && (
+                  <ul className="list-disc list-inside text-gray-800 space-y-2 ml-2">
+                    {job.responsibilities.map((responsibility, idx) => (
+                      <li key={idx}>{responsibility}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   <span className="font-bold">Tech: </span>
                   {job.skills &&
@@ -163,20 +174,31 @@ const CV = () => {
                   </span>
                 </div>
                 {os.positions &&
-                  os.positions.map((position, index) => (
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2 ml-2">
-                      <span className="font-bold">{position.title}</span>
-                      <span className="text-gray-600 font-medium flex items-center gap-1">
-                        <Calendar className="w-4 h-4" />
-                        {position.period}
-                      </span>
+                  os.positions.map((position, posIndex) => (
+                    <div key={posIndex} className="ml-2 mb-4">
+                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-2">
+                        <span className="font-bold">{position.title}</span>
+                        <span className="text-gray-600 font-medium flex items-center gap-1">
+                          <Calendar className="w-4 h-4" />
+                          {position.period}
+                        </span>
+                      </div>
+                      {position.responsibilities && position.responsibilities.length > 0 && (
+                        <ul className="list-disc list-inside text-gray-800 space-y-2 ml-2">
+                          {position.responsibilities.map((responsibility, idx) => (
+                            <li key={idx}>{responsibility}</li>
+                          ))}
+                        </ul>
+                      )}
                     </div>
                   ))}
-                <ul className="list-disc list-inside text-gray-800 space-y-2 ml-2">
-                  {os.responsibilities.map((responsibility, idx) => (
-                    <li key={idx}>{responsibility}</li>
-                  ))}
-                </ul>
+                {os.responsibilities && os.responsibilities.length > 0 && (
+                  <ul className="list-disc list-inside text-gray-800 space-y-2 ml-2">
+                    {os.responsibilities.map((responsibility, idx) => (
+                      <li key={idx}>{responsibility}</li>
+                    ))}
+                  </ul>
+                )}
                 <div className="flex flex-wrap gap-2 mt-4">
                   <span className="font-bold">Tech: </span>
                   {os.skills &&
