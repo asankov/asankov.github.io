@@ -23,6 +23,7 @@ experience:
         responsibilities:
           - "Leading the development of Application Performance Automation - APA - next-gen AI automation platform by Cast AI"
           - "Building AI agents that automate different flows and tasks of your day-to-day work with Kubernetes"
+          - "Building Kubernetes operators to manage the agents"
           - "Involved in planning, design and implementation of new features and agents"
           - "Communication with different internal (UI/UX, PM, SE, Sales) and external (customers) stakeholders"
           - "Writing clean and maintainable code, doing code reviews, interview and onboarding new team members"
