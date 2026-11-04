@@ -421,7 +421,7 @@ spec:
     labels: ["gatekeeper"]
 ```
 
-If you want to learn more about using Gatekeeper and OPA check out my article about [Securing Kubernetes with Open Policy Agent](/post/securing-kubernetes-with-open-policy-agent/).
+If you want to learn more about using Gatekeeper and OPA check out my article about [Securing Kubernetes with Open Policy Agent](/post/securing-kubernetes-with-open-policy-agent-and-gatekeeper/).
 
 ### OpenID Connect
 
@@ -448,13 +448,13 @@ Every concept in this article can be part of an "enterprise-level security."
 
 An enterprise using Kubernetes and wanting to secure it in an "enterprise" way needs to use at least half of the things described in this article.
 
-At a minimum, they need to use [RBAC](/post/demystifying-the-kubernetes-iceberg-4#RBAC) to ensure that everyone has access only to the resource they need to have.
+At a minimum, they need to use [RBAC](/post/demystifying-the-kubernetes-iceberg-4/#rbac) to ensure that everyone has access only to the resource they need to have.
 Ideally, that will be integrated with their AD provider using an [OpenID Connect](/post/demystifying-the-kubernetes-iceberg-4/#openid-connect) provider like [Dex](/post/demystifying-the-kubernetes-iceberg-4/#dex).
 Then, they need to enable [audit logging](/post/demystifying-the-kubernetes-iceberg-4/#audit-logging) so that if someone manages to escalate privileges or if RBAC is configured wrong, there is a reliable trace for that.
 
 Another good additional layer of security would be to limit what processes the Pods can run via tools like [AppArmor](/post/demystifying-the-kubernetes-iceberg-4/#apparmor) and [seccomp](/post/demystifying-the-kubernetes-iceberg-4/#seccomp) and what network connections they can do via [PodSecurityPolicies](/post/demystifying-the-kubernetes-iceberg-4/#podsecuritypolicy).
 
-Last but not least, they could implement Dynamic admission control via mutating and admission webhooks, using tools like [OPA](blog/2022/06/05/demystifying-the-kubernetes-iceberg-4/#open-policy-agent) and [Gatekeeper](blog/2022/06/05/demystifying-the-kubernetes-iceberg-4/#gatekeeper).
+Last but not least, they could implement Dynamic admission control via mutating and admission webhooks, using tools like [OPA](/post/demystifying-the-kubernetes-iceberg-4/#open-policy-agent) and [Gatekeeper](/post/demystifying-the-kubernetes-iceberg-4/#bonus-gatekeeper).
 
 ## Summary
 

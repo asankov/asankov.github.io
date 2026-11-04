@@ -60,7 +60,7 @@ For more info and good practices about metrics, you can check [this great articl
 
 ### Terraform-managed infrastructure
 
-[Terraform](/2022/05/29/demystifying-the-kubernetes-iceberg-3/#terraform) is an open-source IaC tool.
+[Terraform](/post/demystifying-the-kubernetes-iceberg-3/#terraform) is an open-source IaC tool.
 It allows you to describe your infrastructure in text files and have it created for you by Terraform.
 Each change in your infrastructure goes through a change in the Terraform files.
 
@@ -283,7 +283,7 @@ Tools like [`kubeadm`](https://kubernetes.io/docs/setup/production-environment/t
 
 You can find more on how to achieve this in [this article](https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-certs/).
 
-Other tools like [`cert-manager`](/2022/06/12/demystifying-the-kubernetes-iceberg-5/#cert-manager) provide integration with CA authorities to automatically fetch and generate new certificates when the old ones expire.
+Other tools like [`cert-manager`](/post/demystifying-the-kubernetes-iceberg-5/#cert-manager) provide integration with CA authorities to automatically fetch and generate new certificates when the old ones expire.
 
 ### node-local-dns
 

@@ -1,0 +1,26 @@
+---
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const links = [
+  { href: '/', label: 'Posts', active: pathname === '/' },
+  { href: '/about/', label: 'About', active: pathname === '/about' },
+  { href: '/cv/', label: 'CV', active: pathname === '/cv' },
+];
+---
+
+<header class="border-b border-gray-200 bg-white">
+  <div class="max-w-4xl mx-auto px-6 py-8">
+    <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+      <a href="/" class="text-2xl font-bold text-black hover:text-gray-700 transition-colors">
+        Anton Sankov's Blog
+      </a>
+      <nav aria-label="Main navigation" class="flex gap-8">
+        {links.map(({ href, label, active }) => (
+          <a href={href} aria-current={active ? 'page' : undefined}
+            class="text-black hover:text-gray-600 transition-colors font-medium">
+            {label}
+          </a>
+        ))}
+      </nav>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,167 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import { loadCVData } from '../lib/cv';
+
+const cv = loadCVData();
+const experienceSections = [
+  { id: 'work-experience', title: 'Work Experience', entries: cv.experience },
+  { id: 'open-source-contributions', title: 'Open Source Contributions', entries: cv.openSourceContributions },
+];
+---
+
+<BaseLayout title={`CV | ${cv.personal.name}`} description={cv.personal.description}>
+  <main id="main-content" class="max-w-4xl mx-auto px-6 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-black mb-4">{cv.personal.name}</h1>
+      <p class="text-xl text-gray-600 leading-relaxed">{cv.personal.description}</p>
+    </div>
+
+    <section class="mb-12" id="contact-information">
+      <h2 class="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">Contact Information</h2>
+      <div class="flex flex-wrap gap-x-6 gap-y-3 text-black">
+        <a
+          href={`mailto:${cv.contact.email}`}
+          class="flex items-center gap-2 text-black hover:text-gray-600 transition-colors"
+          title={`Email: ${cv.contact.email}`}
+        >
+          <Icon name="envelope" class="w-5 h-5 shrink-0" />
+          <span>{cv.contact.email}</span>
+        </a>
+        <a
+          href={cv.contact.linkedinLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-black hover:text-gray-600 transition-colors"
+          title={`LinkedIn: ${cv.contact.linkedin}`}
+        >
+          <Icon name="linkedin" class="w-5 h-5 shrink-0" />
+          <span>{cv.contact.linkedin}</span>
+        </a>
+        <a
+          href={`https://github.com/${cv.contact.github}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-black hover:text-gray-600 transition-colors"
+          title={`GitHub: ${cv.contact.github}`}
+        >
+          <Icon name="github" class="w-5 h-5 shrink-0" />
+          <span>{cv.contact.github}</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="mb-12" id="professional-summary">
+      <h2 class="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">Professional Summary</h2>
+      <p class="text-gray-800 leading-relaxed">{cv.summary}</p>
+    </section>
+
+    {experienceSections.map((section) => (
+      <section class="mb-12" id={section.id}>
+        <h2 class="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">{section.title}</h2>
+        <div class="space-y-8">
+          {section.entries.map((job) => (
+            <div class="border-l-2 border-gray-200 pl-6">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-x-4">
+                <h3 class="text-xl font-bold text-black">{job.company}</h3>
+                <span class="text-gray-600 font-medium flex items-center gap-1">
+                  <Icon name="map-pin" class="w-4 h-4 shrink-0" />
+                  {job.location}
+                </span>
+              </div>
+              {job.positions.map((position) => (
+                <div class="ml-2 mb-4">
+                  <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-x-4">
+                    <h4 class="font-bold">{position.title}</h4>
+                    <span class="text-gray-600 font-medium flex items-center gap-1">
+                      <Icon name="calendar" class="w-4 h-4 shrink-0" />
+                      {position.period}
+                    </span>
+                  </div>
+                  {position.responsibilities.length > 0 && (
+                    <ul class="list-disc list-inside text-gray-800 space-y-2 ml-2">
+                      {position.responsibilities.map((responsibility) => <li>{responsibility}</li>)}
+                    </ul>
+                  )}
+                  {position.skills.length > 0 && (
+                    <div class="flex flex-wrap gap-2 mt-2 ml-2">
+                      <span class="font-bold">Tech: </span>
+                      {position.skills.map((skill) => (
+                        <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{skill}</span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+              {job.responsibilities.length > 0 && (
+                <ul class="list-disc list-inside text-gray-800 space-y-2 ml-2">
+                  {job.responsibilities.map((responsibility) => <li>{responsibility}</li>)}
+                </ul>
+              )}
+              {job.skills.length > 0 && (
+                <div class="flex flex-wrap gap-2 mt-4">
+                  <span class="font-bold">Tech: </span>
+                  {job.skills.map((skill) => (
+                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium">{skill}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <section class="mb-12" id="public-talks">
+      <h2 class="text-3xl font-bold text-black mb-6 border-b border-gray-200 pb-2">Public Talks</h2>
+      {cv.talks.map((talk) => (
+        <div class="border-l-2 border-gray-200 pl-6 mb-10">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 gap-x-4">
+            <h3 class="text-xl font-bold text-black">{talk.venue}</h3>
+            <span class="text-gray-600 font-medium flex items-center gap-1">
+              <Icon name="map-pin" class="w-4 h-4 shrink-0" />
+              {talk.location}
+            </span>
+          </div>
+          {talk.sessions.map((session, index) => (
+            <div class="ml-3">
+              <div class="flex flex-col md:flex-row md:justify-between md:items-start mb-2 mt-3 gap-x-4">
+                <div class="flex flex-wrap items-center gap-y-2">
+                  <h4 class="text-gray-700 font-medium">{session.name}</h4>
+                  {session.type && <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm font-medium ml-1">{session.type}</span>}
+                </div>
+                {index === 0 && (
+                  <span class="text-gray-600 font-medium flex items-center gap-1">
+                    <Icon name="calendar" class="w-4 h-4 shrink-0" />
+                    {talk.date}
+                  </span>
+                )}
+              </div>
+              {session.with && <div>With {session.with}</div>}
+              <div class="text-gray-800 mb-3 mt-3" set:html={session.summary} />
+              {session.links && (
+                <div class="flex gap-3 mt-2">
+                  {session.links.youtube && (
+                    <a href={session.links.youtube} target="_blank" rel="noopener noreferrer" aria-label={`Watch ${session.name} at ${talk.venue}`} class="text-black hover:text-gray-600 transition-colors">
+                      <Icon name="youtube" class="w-8 h-8" />
+                    </a>
+                  )}
+                  {session.links.github && (
+                    <a href={session.links.github} target="_blank" rel="noopener noreferrer" aria-label={`Source code for ${session.name} at ${talk.venue}`} class="text-black hover:text-gray-600 transition-colors">
+                      <Icon name="github" class="w-8 h-8" />
+                    </a>
+                  )}
+                  {session.links.slides && (
+                    <a href={session.links.slides} target="_blank" rel="noopener noreferrer" aria-label={`Slides for ${session.name} at ${talk.venue}`} class="text-black hover:text-gray-600 transition-colors">
+                      <Icon name="slideshare" class="w-8 h-8" />
+                    </a>
+                  )}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
+    </section>
+  </main>
+</BaseLayout>

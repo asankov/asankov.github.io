@@ -2,102 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. */
-
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  body {
+    @apply bg-white text-gray-900;
+    overflow-wrap: break-word;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+  [id] {
+    scroll-margin-top: 2rem;
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
+@layer components {
+  .skip-link {
+    @apply sr-only;
   }
 
-  body {
-    @apply bg-background text-foreground;
+  .skip-link:focus {
+    @apply not-sr-only absolute left-6 top-4 z-50 bg-white px-4 py-2 text-black underline;
+  }
+
+  .prose {
+    @apply max-w-none text-lg;
+  }
+
+  .prose h1 {
+    @apply text-4xl font-bold text-black mb-6 mt-8;
+  }
+
+  .prose h1:first-child {
+    @apply mt-0;
+  }
+
+  .prose h2 {
+    @apply text-3xl font-bold text-black mb-4 mt-8;
+  }
+
+  .prose h3 {
+    @apply text-2xl font-bold text-black mb-3 mt-6;
+  }
+
+  .prose h4 {
+    @apply text-xl font-bold text-black mb-3 mt-6;
+  }
+
+  .prose p {
+    @apply text-gray-800 leading-relaxed mb-6;
+  }
+
+  .prose a {
+    @apply text-black underline hover:text-gray-600 transition-colors;
+    overflow-wrap: anywhere;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-black pl-6 my-6 text-gray-700 italic;
+  }
+
+  .prose ul, .prose ol {
+    @apply list-outside pl-6 mb-6 text-gray-800 space-y-2;
+  }
+
+  .prose ul { @apply list-disc; }
+  .prose ol { @apply list-decimal; }
+  .prose li { @apply leading-relaxed; }
+  .prose li > ul, .prose li > ol { @apply mt-2 mb-0; }
+  .prose li > p { @apply mb-2; }
+
+  .prose :not(pre) > code {
+    @apply bg-gray-100 text-black px-2 py-1 rounded text-sm font-mono;
+  }
+
+  .prose pre {
+    @apply text-sm rounded-lg p-6 mb-6 overflow-x-auto;
+    tab-size: 2;
+  }
+
+  .prose pre code {
+    @apply font-mono;
+  }
+
+  .prose img { @apply h-auto rounded my-6; }
+  .prose hr { @apply my-8 border-gray-200; }
+  .prose table { @apply block w-full overflow-x-auto mb-6 text-base; }
+  .prose th, .prose td { @apply border border-gray-200 px-4 py-2 text-left; }
+  .prose th { @apply bg-gray-50 font-bold; }
+
+  .code-block { @apply relative mb-6; }
+  .code-block pre { @apply pt-14 mb-0; }
+  .code-language { @apply absolute top-4 left-6 text-xs text-gray-400 font-mono; }
+  .code-copy {
+    @apply absolute top-3 right-3 rounded bg-gray-700 px-3 py-1 text-sm text-white hover:bg-gray-600;
   }
 }

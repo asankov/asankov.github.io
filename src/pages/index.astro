@@ -1,0 +1,33 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPosts, formatDate, readTime } from '../lib/posts';
+
+const posts = await getPosts();
+---
+
+<BaseLayout>
+  <main id="main-content" class="max-w-4xl mx-auto px-6 py-12">
+    <div class="mb-12">
+      <h1 class="text-4xl font-bold text-black mb-4">Thoughts on AI and Software Engineering</h1>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        A collection of insights, lessons learned, and technical deep-dives
+        from the world of software development.
+      </p>
+    </div>
+    <div>
+      {posts.map((post) => (
+        <article class="group border-b border-gray-100 pb-8 mb-8 last:border-b-0">
+          <a href={`/post/${post.id}/`} class="block">
+            <h2 class="text-2xl font-bold text-black group-hover:text-gray-700 transition-colors mb-3">{post.data.title}</h2>
+            <p class="text-gray-600 mb-4 leading-relaxed">{post.data.description}</p>
+            <div class="flex items-center text-sm text-gray-500 gap-4">
+              <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+              <span aria-hidden="true">•</span>
+              <span>{readTime(post.body)}</span>
+            </div>
+          </a>
+        </article>
+      ))}
+    </div>
+  </main>
+</BaseLayout>

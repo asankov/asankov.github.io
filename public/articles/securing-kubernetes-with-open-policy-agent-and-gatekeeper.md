@@ -345,7 +345,7 @@ What happened in more detail was:
 The output is clear on where we are wrong and what we need to correct to create this resource.
 Let's do that.
 
-We have the same deployment with the additional labels in [`compliant-deployment.yaml`](k8s/compliant-deployment.yaml).
+We have the same deployment with the additional labels in [`compliant-deployment.yaml`](https://github.com/asankov/securing-kubernetes-with-open-policy-agent/blob/main/k8s/compliant-deployment.yaml).
 
 Let's apply this file:
 

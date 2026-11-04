@@ -1,0 +1,42 @@
+<script>
+  // Reading and syntax highlighting work without JavaScript; only copying needs it.
+  document.querySelectorAll<HTMLPreElement>('.prose pre').forEach((pre) => {
+    const code = pre.querySelector('code');
+    if (!code || !navigator.clipboard) return;
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'code-block';
+    pre.before(wrapper);
+    wrapper.append(pre);
+
+    const language = document.createElement('span');
+    language.className = 'code-language';
+    language.textContent = pre.dataset.language || 'text';
+    wrapper.append(language);
+
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'code-copy';
+    button.textContent = 'Copy';
+    button.setAttribute('aria-label', 'Copy code');
+    const status = document.createElement('span');
+    status.className = 'sr-only';
+    status.setAttribute('role', 'status');
+    wrapper.append(button, status);
+
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(code.textContent ?? '');
+        button.textContent = 'Copied!';
+        status.textContent = 'Code copied to clipboard';
+      } catch {
+        button.textContent = 'Copy failed';
+        status.textContent = 'Unable to copy. Select the code to copy it manually.';
+      }
+      window.setTimeout(() => {
+        button.textContent = 'Copy';
+        status.textContent = '';
+      }, 2000);
+    });
+  });
+</script>

@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths, InferGetStaticPropsType } from 'astro';
+import { getPosts } from '../lib/posts';
+
+export const getStaticPaths = (async () => {
+  return (await getPosts()).flatMap((post) => post.data.aliases.map((alias) => ({
+    params: { alias: alias.replace(/^\/|\/$/g, '') },
+    props: { destination: `/post/${post.id}/`, title: post.data.title },
+  })));
+}) satisfies GetStaticPaths;
+
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { destination, title } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta http-equiv="refresh" content={`0;url=${destination}`} />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={new URL(destination, Astro.site)} />
+  </head>
+  <body><p>This article has moved to <a href={destination}>{title}</a>.</p></body>
+</html>
