@@ -14,12 +14,29 @@ contact:
 summary: "Staff AI Engineer with extensive experience in AI Engineering, Kubernetes, Python and Go development. Strong background in building scalable microservices, container security products, and developer tooling. Active open source contributor and international conference speaker with expertise in DevSecOps and software architecture."
 
 experience:
+  - title: "Staff Engineer"
+    company: "Field Materials AI"
+    location: "Sofia, Bulgaria (Remote)"
+    positions:
+      - title: "Staff Engineer"
+        period: "Aug 2026 - Present"
+        responsibilities:
+          - "Building the paltform for running automation agents in Field Materials"
+          - "Working on core AI features such as OCR, classification, extraction and matching."
+          - "Involved in planning, design and implementation of new features and agents"
+          - "Communication with different internal (UI/UX, PM, SE, Sales) and external (customers) stakeholders"
+          - "Writing clean and maintainable code, doing code reviews, interview and onboarding new team members"
+        skills:
+          - Go
+          - LLMs (OpenAI, Anthropic, Gemini)
+          - Temporal
+          - GraphQL
   - title: "Staff AI Engineer"
     company: "Cast AI"
     location: "Sofia, Bulgaria (Remote)"
     positions:
       - title: "Staff AI Engineer"
-        period: "Mar 2025 - Present"
+        period: "Mar 2025 - Jul 2026"
         responsibilities:
           - "Leading the development of Application Performance Automation - APA - next-gen AI automation platform by Cast AI"
           - "Building AI agents that automate different flows and tasks of your day-to-day work with Kubernetes"
